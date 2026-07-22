@@ -1,0 +1,15 @@
+{
+  "slug": "contact",
+  "title": "Contact & Book a Private Tour | Private Walking Tours by Ivana",
+  "description": "Request a private walking tour of Šibenik. Message Ivana on WhatsApp, by email, or send the booking form with your dates and group size.",
+  "keywords": "book Šibenik tour, contact Šibenik guide, request private tour Šibenik, Šibenik guide WhatsApp",
+  "og_image": "https://ivanaguide.com/assets/img/sibenik-marina-fishing-boats-sunset-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Private Walking Tours by Ivana",
+      "url": "https://ivanaguide.com/contact/"
+    }
+  ]
+}

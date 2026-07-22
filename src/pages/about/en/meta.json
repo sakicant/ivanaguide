@@ -1,0 +1,19 @@
+{
+  "slug": "about",
+  "title": "About Ivana — Licensed Local Guide in Šibenik",
+  "description": "Meet Ivana: a licensed tourist guide certified by the Croatian Ministry of Tourism, born and raised in Šibenik, former teacher, and storyteller of her home city.",
+  "keywords": "Ivana Šibenik guide, licensed guide Šibenik, local guide Šibenik about, Šibenik tour guide",
+  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-steps-sunset-vert.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ivana",
+      "jobTitle": "Licensed Tourist Guide",
+      "worksFor": { "@type": "TravelAgency", "name": "Private Walking Tours by Ivana", "@id": "https://ivanaguide.com/#business" },
+      "homeLocation": { "@type": "City", "name": "Šibenik" },
+      "knowsLanguage": ["en", "hr"],
+      "description": "Licensed local guide in Šibenik, certified by the Croatian Ministry of Tourism, born and raised in the city."
+    }
+  ]
+}

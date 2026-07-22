@@ -1,0 +1,35 @@
+{
+  "slug": "",
+  "title": "Private Walking Tours in Šibenik | Licensed Local Guide Ivana",
+  "description": "Private walking tours of Šibenik Old Town led by Ivana, a licensed local guide born and raised in the city. History, hidden corners, and personal stories — beyond the guidebooks.",
+  "keywords": "Šibenik walking tour, private tour Šibenik, Šibenik local guide, Šibenik old town tour, licensed guide Šibenik, Šibenik private guide",
+  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-fortress-panorama-dusk-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "@id": "https://ivanaguide.com/#business",
+      "name": "Private Walking Tours by Ivana",
+      "description": "Private walking tours of Šibenik led by a licensed local guide certified by the Croatian Ministry of Tourism.",
+      "url": "https://ivanaguide.com/",
+      "telephone": "+385955278924",
+      "email": "info@ivanaguide.com",
+      "image": "https://ivanaguide.com/assets/img/sibenik-cathedral-st-james-square-sunset-land.webp",
+      "priceRange": "€€",
+      "areaServed": { "@type": "City", "name": "Šibenik" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Obala hrvatske mornarice 1",
+        "addressLocality": "Šibenik",
+        "postalCode": "22000",
+        "addressCountry": "HR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Ivana",
+        "jobTitle": "Licensed Tourist Guide",
+        "knowsLanguage": ["en", "hr"]
+      }
+    }
+  ]
+}
