@@ -7,16 +7,18 @@
   --bg:        #faf7f1;   /* warm limestone paper            */
   --bg-alt:    #f2ece1;   /* slightly deeper section band    */
   --surface:   #ffffff;
-  --ink:       #26332a;   /* deep Dalmatian pine green       */
-  --ink-soft:  #3e4a40;   /* dark green-grey body text       */
-  --ink-deep:  #1d271f;   /* darkest green, footer/panels    */
-  --muted:     #77706a;   /* captions, meta                  */
-  --line:      #e4daca;   /* hairline borders                */
+  --brand:     #0f5c5b;   /* Deep Teal — primary brand hue   */
+  --brand-dark:#0b4746;   /* deeper teal for dark surfaces   */
+  --ink:       #0f5c5b;   /* primary teal: headings, accents */
+  --ink-soft:  #26403f;   /* dark teal-charcoal body text    */
+  --ink-deep:  #0b4746;   /* deepest teal, footer/panels     */
+  --muted:     #6c7a76;   /* cool taupe-teal captions, meta  */
+  --line:      #e4daca;   /* warm hairline borders           */
   --line-soft: #efe7d8;
-  --gold:      #b0824a;   /* Dalmatian stone-sunset accent   */
-  --gold-dark: #8a6234;
-  --gold-soft: #f0e4d1;
-  --sea:       #3f6a6b;   /* muted Adriatic teal, sparing    */
+  --gold:      #b58a4a;   /* Warm Gold — accents             */
+  --gold-dark: #8a6631;   /* darker gold for links & text    */
+  --gold-soft: #f1e6d2;
+  --sea:       #0f5c5b;   /* brand teal for positive marks   */
 
   --serif: 'Playfair Display', 'Times New Roman', serif;
   --logo:  'Marcellus', var(--serif);
@@ -167,7 +169,7 @@ a:hover { color: var(--ink); }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(17,24,18,.30) 0%, rgba(17,24,18,.12) 40%, rgba(17,24,18,.80) 100%);
+  background: linear-gradient(180deg, rgba(7,33,32,.32) 0%, rgba(7,33,32,.12) 40%, rgba(7,33,32,.82) 100%);
 }
 .hero-inner { width: min(var(--wrap), 92%); margin-inline: auto; padding: 0 0 clamp(3rem, 8vw, 6rem); max-width: 900px; }
 .hero .eyebrow { color: #efd7ad; }
@@ -308,19 +310,19 @@ a:hover { color: var(--ink); }
 .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* --------------------------------------------------------------- footer */
-.site-footer { background: var(--ink-deep); color: #aab3a6; padding: clamp(3.5rem, 6vw, 5rem) 0 0; font-size: 0.92rem; }
+.site-footer { background: var(--ink-deep); color: #a3b8b4; padding: clamp(3.5rem, 6vw, 5rem) 0 0; font-size: 0.92rem; }
 .footer-inner { width: min(var(--wrap), 92%); margin-inline: auto; display: grid; grid-template-columns: 1.6fr 1fr 1.3fr; gap: 2.5rem; padding-bottom: 3rem; }
 .footer-name { font-family: var(--logo); color: #fff; font-size: 1.3rem; }
 .footer-tagline { margin: 0.8rem 0 1.2rem; color: #9a8f7f; max-width: 320px; }
 .footer-social { display: flex; gap: 0.7rem; }
-.social-link { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #35402f; border-radius: 50%; color: #aab3a6; transition: all .25s var(--ease); }
+.social-link { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #2e4746; border-radius: 50%; color: #a3b8b4; transition: all .25s var(--ease); }
 .social-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(176,130,74,.1); }
 .footer-heading { font-family: var(--sans); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: #7d7365; margin: 0 0 1.1rem; font-weight: 600; }
 .footer-nav, .footer-contact { display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-nav a, .footer-contact a { color: #cabfae; }
 .footer-nav a:hover, .footer-contact a:hover { color: var(--gold); }
 .footer-meet { color: #9a8f7f; font-size: 0.85rem; margin-top: 0.4rem; }
-.footer-bottom { border-top: 1px solid #2b352d; padding: 1.4rem 0; text-align: center; font-size: 0.78rem; color: #7a806f; }
+.footer-bottom { border-top: 1px solid #214443; padding: 1.4rem 0; text-align: center; font-size: 0.78rem; color: #6f817c; }
 .footer-bottom p { margin: 0; }
 
 /* --------------------------------------------------------------- breadcrumbs */
@@ -334,7 +336,7 @@ a:hover { color: var(--ink); }
 .tour-hero { position: relative; min-height: 54vh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
 .tour-hero-bg { position: absolute; inset: 0; z-index: -2; }
 .tour-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-.tour-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(17,24,18,.28) 0%, rgba(17,24,18,.15) 45%, rgba(17,24,18,.82) 100%); }
+.tour-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(7,33,32,.30) 0%, rgba(7,33,32,.15) 45%, rgba(7,33,32,.84) 100%); }
 .tour-hero-inner { width: min(var(--wrap), 92%); margin-inline: auto; padding: 0 0 clamp(2rem,5vw,3.5rem); max-width: 820px; }
 .tour-hero .eyebrow { color: #efd7ad; }
 .tour-hero h1 { color: #fff; font-size: clamp(2.2rem,5vw,3.6rem); text-shadow: 0 2px 24px rgba(0,0,0,.35); margin-bottom: 0.3rem; }
