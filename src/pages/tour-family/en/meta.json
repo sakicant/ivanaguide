@@ -1,0 +1,27 @@
+{
+  "slug": "tours/family",
+  "title": "Šibenik Family Private Walking Tour | Private Walking Tours by Ivana",
+  "description": "A private, family-friendly walking tour of Šibenik led by a licensed local guide and former teacher. History through stories for children and adults. 1.5–2 hours, €160 per group.",
+  "keywords": "Šibenik family tour, kid friendly Šibenik tour, private family walking tour Šibenik, Šibenik with children",
+  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-harbor-boats-dusk-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Family Private Walking Tour in Šibenik",
+      "description": "A private, family-friendly walking tour of Šibenik led by a licensed local guide and former teacher. History through stories for children and adults. 1.5–2 hours, €160 per group.",
+      "image": "https://ivanaguide.com/assets/img/sibenik-old-town-harbor-boats-dusk-land.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Private Walking Tours by Ivana"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "160",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ivanaguide.com/tours/family/"
+      }
+    }
+  ]
+}

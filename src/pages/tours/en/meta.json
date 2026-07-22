@@ -1,8 +1,8 @@
 {
   "slug": "tours",
   "title": "Šibenik Private Walking Tours & Prices | Ivana, Local Guide",
-  "description": "Five private walking tours of Šibenik with a licensed local guide: Old Town, Family, History & Coffee, and two Homeland War experiences. Durations, prices, and highlights.",
-  "keywords": "Šibenik tours, Šibenik old town walking tour, Šibenik family tour, Šibenik homeland war tour, private guide Šibenik prices",
+  "description": "Private walking tours of Šibenik with a licensed local guide: Old Town, Family, History & Coffee, two Homeland War experiences, and a Krka National Park tour. See each tour's details and price.",
+  "keywords": "Šibenik tours, Šibenik old town walking tour, Šibenik family tour, Šibenik homeland war tour, Krka private tour, private guide Šibenik prices",
   "og_image": "https://ivanaguide.com/assets/img/sibenik-cathedral-st-james-sunset-land.webp",
   "schema": [
     {
@@ -10,11 +10,12 @@
       "@type": "ItemList",
       "name": "Private walking tours of Šibenik",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Šibenik Old Town Private Walking Tour", "url": "https://ivanaguide.com/tours/#old-town" },
-        { "@type": "ListItem", "position": 2, "name": "Šibenik Family Private Walking Tour", "url": "https://ivanaguide.com/tours/#family" },
-        { "@type": "ListItem", "position": 3, "name": "Šibenik History & Coffee with a Local Guide", "url": "https://ivanaguide.com/tours/#history-coffee" },
-        { "@type": "ListItem", "position": 4, "name": "Šibenik Homeland War Experience", "url": "https://ivanaguide.com/tours/#homeland-war" },
-        { "@type": "ListItem", "position": 5, "name": "Šibenik History & Homeland War Private Walking Tour", "url": "https://ivanaguide.com/tours/#history-homeland-war" }
+        { "@type": "ListItem", "position": 1, "name": "Šibenik Old Town Private Walking Tour", "url": "https://ivanaguide.com/tours/old-town/" },
+        { "@type": "ListItem", "position": 2, "name": "Šibenik Family Private Walking Tour", "url": "https://ivanaguide.com/tours/family/" },
+        { "@type": "ListItem", "position": 3, "name": "Šibenik History & Coffee with a Local Guide", "url": "https://ivanaguide.com/tours/history-coffee/" },
+        { "@type": "ListItem", "position": 4, "name": "Šibenik Homeland War Experience", "url": "https://ivanaguide.com/tours/homeland-war/" },
+        { "@type": "ListItem", "position": 5, "name": "Šibenik History & Homeland War Private Walking Tour", "url": "https://ivanaguide.com/tours/history-homeland-war/" },
+        { "@type": "ListItem", "position": 6, "name": "Private Guided Krka National Park Tour", "url": "https://ivanaguide.com/tours/krka/" }
       ]
     }
   ]

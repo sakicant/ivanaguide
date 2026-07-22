@@ -63,6 +63,8 @@ DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/img/sibenik-cathedral-st-james-square-sun
 YEAR = str(datetime.date.today().year)
 
 HOME_LABEL = {"en": "Home"}
+# Parent-section labels for nested slugs (e.g. tours/old-town -> "Tours").
+SECTION_LABELS = {"tours": "Tours"}
 
 
 def compute_asset_version():
@@ -177,7 +179,8 @@ def build_nav(current_slug, lang):
     ]
     links = []
     for slug, label in items:
-        cls = "nav-link active" if slug == current_slug else "nav-link"
+        active = (slug == current_slug) or (slug != "" and current_slug.startswith(slug + "/"))
+        cls = "nav-link active" if active else "nav-link"
         links.append(f'<a href="{url_path(lang, slug)}" class="{cls}">{label}</a>')
     return "\n        ".join(links)
 
@@ -186,6 +189,7 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     slug = meta.get("slug", "")
     body = read(content_path)
     body = body.replace("{{CONTACT_CTA}}", load_partial("contact-cta", lang))
+    body = body.replace("{{REVIEWS}}", load_partial("reviews", lang))
 
     canonical = canonical_url(lang, slug)
     header_html = load_partial("header", lang).replace("{{NAV}}", build_nav(slug, lang))
@@ -194,14 +198,20 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     schema = meta.get("schema")
     schema_list = schema if isinstance(schema, list) else ([schema] if schema else [])
     if slug:  # breadcrumb on every page except home
+        crumbs = [{"@type": "ListItem", "position": 1, "name": HOME_LABEL.get(lang, "Home"),
+                   "item": canonical_url(lang, "")}]
+        pos = 2
+        if "/" in slug:  # nested page -> insert its parent section crumb
+            parent = slug.split("/")[0]
+            crumbs.append({"@type": "ListItem", "position": pos,
+                           "name": SECTION_LABELS.get(parent, parent.title()),
+                           "item": canonical_url(lang, parent)})
+            pos += 1
+        crumbs.append({"@type": "ListItem", "position": pos,
+                       "name": meta["title"].split(" | ")[0].strip(), "item": canonical})
         schema_list = list(schema_list) + [{
             "@context": "https://schema.org", "@type": "BreadcrumbList",
-            "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": HOME_LABEL.get(lang, "Home"),
-                 "item": canonical_url(lang, "")},
-                {"@type": "ListItem", "position": 2, "name": meta["title"].split(" | ")[0].strip(),
-                 "item": canonical},
-            ],
+            "itemListElement": crumbs,
         }]
     schema_block = "\n".join(
         '<script type="application/ld+json">\n' + json.dumps(s, indent=2, ensure_ascii=False) + "\n</script>"

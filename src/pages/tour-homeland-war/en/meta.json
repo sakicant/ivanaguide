@@ -1,0 +1,27 @@
+{
+  "slug": "tours/homeland-war",
+  "title": "Šibenik Homeland War Experience | Private Walking Tours by Ivana",
+  "description": "A private Šibenik walking tour about the Croatian Homeland War, told through a local guide's own childhood memories. 2–2.5 hours, €200 per group.",
+  "keywords": "Šibenik homeland war tour, Croatian homeland war Šibenik, September 1991 battle Šibenik, Šibenik history tour",
+  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-fortress-night-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Homeland War Experience in Šibenik",
+      "description": "A private Šibenik walking tour about the Croatian Homeland War, told through a local guide's own childhood memories. 2–2.5 hours, €200 per group.",
+      "image": "https://ivanaguide.com/assets/img/sibenik-old-town-fortress-night-land.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Private Walking Tours by Ivana"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "200",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ivanaguide.com/tours/homeland-war/"
+      }
+    }
+  ]
+}

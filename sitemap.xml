@@ -32,4 +32,52 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/"/>
   </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/family/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/family/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/family/"/>
+  </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/history-coffee/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/history-coffee/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/history-coffee/"/>
+  </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/history-homeland-war/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/history-homeland-war/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/history-homeland-war/"/>
+  </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/homeland-war/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/homeland-war/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/homeland-war/"/>
+  </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/krka/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/krka/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/krka/"/>
+  </url>
+  <url>
+    <loc>https://ivanaguide.com/tours/old-town/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/tours/old-town/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/tours/old-town/"/>
+  </url>
 </urlset>
