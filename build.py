@@ -40,10 +40,11 @@ CONFIG = {
     "PHONE_E164": "+385955278924",
     "WHATSAPP_URL": "https://wa.me/385955278924",
 
-    # PLACEHOLDER — real profile links coming later. "#" keeps the icons
-    # inert (they render but go nowhere) until the URLs are dropped in.
-    "INSTAGRAM": "#",
-    "FACEBOOK": "#",
+    "INSTAGRAM": "https://www.instagram.com/ivana_tourist_guide_sibenik/",
+    # NOTE: user-supplied page handle is "deborahguidedtours" — confirm this is
+    # the right page. Language param (?locale=fo_FO) stripped so it opens normally.
+    "FACEBOOK": "https://www.facebook.com/deborahguidedtours/",
+    "TRIPADVISOR": "https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html",
 
     # PLACEHOLDER — create a free form endpoint (e.g. Formspree) and paste the
     # action URL here. Until then the form posts nowhere.

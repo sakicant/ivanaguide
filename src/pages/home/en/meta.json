@@ -29,7 +29,12 @@
         "name": "Ivana",
         "jobTitle": "Licensed Tourist Guide",
         "knowsLanguage": ["en", "hr"]
-      }
+      },
+      "sameAs": [
+        "{{INSTAGRAM}}",
+        "{{FACEBOOK}}",
+        "{{TRIPADVISOR}}"
+      ]
     }
   ]
 }
