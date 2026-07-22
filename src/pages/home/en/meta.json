@@ -10,6 +10,7 @@
       "@type": "TravelAgency",
       "@id": "https://ivanaguide.com/#business",
       "name": "Private Walking Tours by Ivana",
+      "legalName": "{{LEGAL_NAME}}",
       "description": "Private walking tours of Šibenik led by a licensed local guide certified by the Croatian Ministry of Tourism.",
       "url": "https://ivanaguide.com/",
       "telephone": "+385955278924",
@@ -26,7 +27,7 @@
       },
       "founder": {
         "@type": "Person",
-        "name": "Ivana",
+        "name": "{{OWNER_NAME}}",
         "jobTitle": "Licensed Tourist Guide",
         "knowsLanguage": ["en", "hr"]
       },

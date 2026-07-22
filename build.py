@@ -31,6 +31,10 @@ LANGUAGES = ["en"]  # add "hr", "de", ... here as translations are created
 CONFIG = {
     "SITE_NAME": "Private Walking Tours by Ivana",
     "SHORT_NAME": "Ivana",
+    "OWNER_NAME": "Ivana Kučić",
+    # Registered Croatian obrt (sole proprietorship). Marketing name above is
+    # what visitors see; this legal name is used in structured data.
+    "LEGAL_NAME": "Deborah, obrt za usluge, vl. Ivana Kučić",
 
     # PLACEHOLDER — no domain yet. Replace both when the domain is registered.
     "SITE_URL": "https://ivanaguide.com",
