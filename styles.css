@@ -67,7 +67,7 @@ a:hover { color: var(--ink); }
   font-family: var(--sans);
   text-transform: uppercase;
   letter-spacing: 0.28em;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--gold);
   margin: 0 0 1.1rem;
@@ -195,7 +195,8 @@ a:hover { color: var(--ink); }
 .prose p { margin-bottom: 1.2em; }
 .prose .drop::first-letter { font-family: var(--serif); font-size: 3.4em; line-height: 0.8; float: left; padding: 0.05em 0.12em 0 0; color: var(--gold); font-weight: 600; }
 
-.signature { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--gold-dark); }
+/* Signature line: same font & formatting as the eyebrow labels above headings */
+.signature { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.85rem; font-weight: 600; color: var(--gold); font-style: normal; }
 
 /* --------------------------------------------------------------- feature trio */
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
@@ -333,6 +334,30 @@ a:hover { color: var(--ink); }
 .footer-nav a, .footer-contact a { color: #cabfae; }
 .footer-nav a:hover, .footer-contact a:hover { color: var(--gold); }
 .footer-meet { color: #9a8f7f; font-size: 0.85rem; margin-top: 0.4rem; }
+.fc-item { display: flex; align-items: flex-start; gap: 0.6rem; }
+.fc-item svg { flex: none; margin-top: 3px; color: var(--gold); }
+.fc-item span { line-height: 1.4; }
+
+/* floating WhatsApp button (lazy-revealed after load) */
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 200; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.wa-float[hidden] { display: none; }
+.wa-btn { position: relative; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,.28); transform: scale(0); opacity: 0; transition: transform .4s cubic-bezier(.2,.8,.3,1.3), opacity .4s, box-shadow .25s; }
+.wa-float.wa-show .wa-btn { transform: scale(1); opacity: 1; }
+.wa-btn:hover { color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.36); }
+.wa-btn svg { width: 32px; height: 32px; }
+.wa-btn::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366; z-index: -1; animation: waPulse 2.6s ease-out infinite; }
+@keyframes waPulse { 0% { transform: scale(1); opacity: .45; } 70% { transform: scale(1.7); opacity: 0; } 100% { opacity: 0; } }
+.wa-teaser { position: relative; max-width: 250px; background: #fff; color: var(--ink-soft); border-radius: 14px; padding: 14px 16px; box-shadow: 0 12px 34px rgba(0,0,0,.22); opacity: 0; transform: translateY(10px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.wa-float.wa-teaser-show .wa-teaser { opacity: 1; transform: none; }
+.wa-teaser[hidden] { display: none; }
+.wa-teaser-title { font-family: var(--sans); font-weight: 700; margin: 0 0 4px; font-size: 0.95rem; color: var(--brand); }
+.wa-teaser-msg { margin: 0 0 10px; font-size: 0.85rem; line-height: 1.45; }
+.wa-teaser-cta { display: inline-block; background: #25d366; color: #fff; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.02em; padding: 0.5rem 1rem; border-radius: 7px; }
+.wa-teaser-cta:hover { color: #fff; background: #1fb457; }
+.wa-teaser-close { position: absolute; top: 5px; right: 8px; background: none; border: 0; font-size: 1.2rem; line-height: 1; color: #b0a99f; cursor: pointer; padding: 2px 4px; }
+.wa-teaser-close:hover { color: var(--ink); }
+@media (max-width: 720px) { .wa-float { right: 16px; bottom: 16px; } .wa-btn { width: 54px; height: 54px; } }
+@media (prefers-reduced-motion: reduce) { .wa-btn::after { animation: none; } }
 .footer-bottom { border-top: 1px solid #214443; padding: 1.4rem 0; text-align: center; font-size: 0.78rem; color: #6f817c; }
 .footer-bottom p { margin: 0; }
 

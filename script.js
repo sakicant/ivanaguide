@@ -89,6 +89,37 @@
     box.hidden = false;
   }
 
+  // ---- floating WhatsApp button: lazy-reveal 3s after load ----------------
+  var waFloat = document.getElementById("waFloat");
+  if (waFloat) {
+    window.setTimeout(function () {
+      waFloat.hidden = false;
+      waFloat.setAttribute("aria-hidden", "false");
+      // Force reflow so the transition runs (rAF is paused in background tabs).
+      void waFloat.offsetWidth;
+      waFloat.classList.add("wa-show");
+      var teaser = document.getElementById("waTeaser");
+      if (teaser) {
+        window.setTimeout(function () {
+          teaser.hidden = false;
+          void teaser.offsetWidth;
+          waFloat.classList.add("wa-teaser-show");
+        }, 600);
+      }
+    }, 3000);
+
+    var waClose = document.getElementById("waTeaserClose");
+    if (waClose) {
+      waClose.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        waFloat.classList.remove("wa-teaser-show");
+        var t = document.getElementById("waTeaser");
+        window.setTimeout(function () { if (t) t.hidden = true; }, 320);
+      });
+    }
+  }
+
   // ---- current year (footer fallback if not built) ------------------------
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
