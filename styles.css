@@ -86,10 +86,10 @@ a:hover { color: var(--ink); }
 .lead { font-size: 1.22rem; line-height: 1.65; color: var(--ink-soft); }
 .lead-tight { line-height: 1.4; }
 
-/* Justified body text — evenly distributed between the margins.
-   Applied to reading paragraphs; hyphenation keeps the spacing even. */
-.prose p, .about-body p, .split-body p, .tour-body p,
-.tour-detail-main p, .narrow p {
+/* Justified body text — evenly distributed between the margins, site-wide.
+   Applies to every paragraph (single-line ones are unaffected); auto
+   hyphenation keeps word-spacing even instead of leaving large gaps. */
+p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
