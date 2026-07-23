@@ -87,13 +87,12 @@ a:hover { color: var(--ink); }
 .lead-tight { line-height: 1.4; }
 
 /* Justified body text — evenly distributed between the margins, site-wide.
-   Applies to every paragraph (single-line ones are unaffected); auto
-   hyphenation keeps word-spacing even instead of leaving large gaps. */
+   No hyphenation: whole words stay on one line (never split across rows). */
 p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 .center { text-align: center; }
 .section-head { max-width: 680px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
