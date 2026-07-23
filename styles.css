@@ -99,6 +99,7 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
    These live in text-align:center containers; the site-wide p{justify}
    rule above would otherwise left-/justify-align their eyebrows and leads. */
 .center p, .section-head p, .cta-band p, .reviews-section p, .quote-band p,
+.footer-bottom p,
 .center .lead, .section-head .lead, .reviews-section .lead, .cta-text {
   text-align: center;
 }
