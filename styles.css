@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
   margin: 0 0 0.5em;
   letter-spacing: 0.2px;
 }
-h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 500; }
+h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-family: var(--sans); font-weight: 700; letter-spacing: -0.015em; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
 h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); }
 p  { margin: 0 0 1.1em; }
@@ -84,6 +84,17 @@ a:hover { color: var(--ink); }
 .section-ink h2, .section-ink h3 { color: #fff; }
 
 .lead { font-size: 1.22rem; line-height: 1.65; color: var(--ink-soft); }
+.lead-tight { line-height: 1.4; }
+
+/* Justified body text — evenly distributed between the margins.
+   Applied to reading paragraphs; hyphenation keeps the spacing even. */
+.prose p, .about-body p, .split-body p, .tour-body p,
+.tour-detail-main p, .narrow p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 .center { text-align: center; }
 .section-head { max-width: 680px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
 
@@ -172,7 +183,7 @@ a:hover { color: var(--ink); }
   background: linear-gradient(180deg, rgba(7,33,32,.32) 0%, rgba(7,33,32,.12) 40%, rgba(7,33,32,.82) 100%);
 }
 .hero-inner { width: min(var(--wrap), 92%); margin-inline: auto; padding: 0 0 clamp(3rem, 8vw, 6rem); max-width: 900px; }
-.hero .eyebrow { color: #efd7ad; }
+.hero .eyebrow { color: #efd7ad; font-size: 0.98rem; letter-spacing: 0.3em; margin-bottom: 2.4rem; }
 .hero h1 { color: #fff; text-shadow: 0 2px 30px rgba(0,0,0,.35); }
 .hero-sub { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #f3ece2; max-width: 620px; margin-bottom: 2rem; font-weight: 400; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
