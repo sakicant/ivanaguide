@@ -94,6 +94,15 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   hyphens: none;
   -webkit-hyphens: none;
 }
+
+/* Re-center the display sections (intros, CTA, reviews header, pull quote).
+   These live in text-align:center containers; the site-wide p{justify}
+   rule above would otherwise left-/justify-align their eyebrows and leads. */
+.center p, .section-head p, .cta-band p, .reviews-section p, .quote-band p,
+.center .lead, .section-head .lead, .reviews-section .lead, .cta-text {
+  text-align: center;
+}
+.split-cta { text-align: center; margin-top: 1.4rem; }
 .center { text-align: center; }
 .section-head { max-width: 680px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
 
