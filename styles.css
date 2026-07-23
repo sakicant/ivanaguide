@@ -346,16 +346,11 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .wa-btn svg { width: 32px; height: 32px; }
 .wa-btn::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366; z-index: -1; animation: waPulse 2.6s ease-out infinite; }
 @keyframes waPulse { 0% { transform: scale(1); opacity: .45; } 70% { transform: scale(1.7); opacity: 0; } 100% { opacity: 0; } }
-.wa-teaser { position: relative; max-width: 250px; background: #fff; color: var(--ink-soft); border-radius: 14px; padding: 14px 16px; box-shadow: 0 12px 34px rgba(0,0,0,.22); opacity: 0; transform: translateY(10px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
-.wa-float.wa-teaser-show .wa-teaser { opacity: 1; transform: none; }
-.wa-teaser[hidden] { display: none; }
-.wa-teaser-title { font-family: var(--sans); font-weight: 700; margin: 0 0 4px; font-size: 0.95rem; color: var(--brand); }
-.wa-teaser-msg { margin: 0 0 10px; font-size: 0.85rem; line-height: 1.45; }
-.wa-teaser-cta { display: inline-block; background: #25d366; color: #fff; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.02em; padding: 0.5rem 1rem; border-radius: 7px; }
-.wa-teaser-cta:hover { color: #fff; background: #1fb457; }
-.wa-teaser-close { position: absolute; top: 5px; right: 8px; background: none; border: 0; font-size: 1.2rem; line-height: 1; color: #b0a99f; cursor: pointer; padding: 2px 4px; }
-.wa-teaser-close:hover { color: var(--ink); }
-@media (max-width: 720px) { .wa-float { right: 16px; bottom: 16px; } .wa-btn { width: 54px; height: 54px; } }
+/* hover tooltip (shown on hover / keyboard focus of the button) */
+.wa-tip { position: absolute; right: calc(100% + 14px); top: 50%; transform: translateY(-50%) translateX(8px); white-space: nowrap; background: var(--ink); color: #fff; font-family: var(--sans); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.01em; padding: 0.6rem 0.95rem; border-radius: 9px; box-shadow: 0 10px 26px rgba(0,0,0,.24); opacity: 0; pointer-events: none; transition: opacity .2s var(--ease), transform .2s var(--ease); }
+.wa-tip::after { content: ""; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--ink); }
+.wa-btn:hover .wa-tip, .wa-btn:focus-visible .wa-tip { opacity: 1; transform: translateY(-50%) translateX(0); }
+@media (max-width: 720px) { .wa-float { right: 16px; bottom: 16px; } .wa-btn { width: 54px; height: 54px; } .wa-tip { display: none; } }
 @media (prefers-reduced-motion: reduce) { .wa-btn::after { animation: none; } }
 .footer-bottom { border-top: 1px solid #214443; padding: 1.4rem 0; text-align: center; font-size: 0.78rem; color: #6f817c; }
 .footer-bottom p { margin: 0; }
