@@ -46,7 +46,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto is the fix for a subtle bug: when an <img> has HTML width/height
+   attributes (for layout stability) but CSS only overrides width, browsers
+   keep the HTML height attribute as a fixed pixel value, stretching the box.
+   Rules below that need a different height (aspect-ratio boxes, cover fills)
+   explicitly set their own height and win via specificity. */
+img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--serif);
@@ -230,15 +235,30 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .tour-card-media { position: relative; aspect-ratio: 3 / 2; overflow: hidden; }
 .tour-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .tour-card:hover .tour-card-media img { transform: scale(1.05); }
-.tour-price { position: absolute; top: 1rem; right: 1rem; background: rgba(250,247,241,.94); color: var(--ink); font-weight: 600; font-size: 0.9rem; padding: 0.35rem 0.75rem; border-radius: 2px; }
-.tour-card-body { padding: 1.6rem 1.7rem 1.8rem; display: flex; flex-direction: column; flex: 1; }
-.tour-card-body h3 { margin-bottom: 0.5rem; }
-.tour-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.9rem; }
-.tour-meta span { display: inline-flex; align-items: center; gap: 0.35rem; }
-.tour-card-body p { font-size: 0.97rem; color: var(--ink-soft); margin-bottom: 1.4rem; }
-.tour-card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
-.tour-card-foot .link-more { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark); }
-.tour-card-foot .link-more:hover { color: var(--ink); }
+
+/* duration pill, top-left of the image */
+.tour-duration { position: absolute; top: 1rem; left: 1rem; display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(250,247,241,.95); color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.02em; padding: 0.4rem 0.8rem 0.4rem 0.65rem; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+.tour-duration svg { width: 13px; height: 13px; color: var(--gold-dark); flex: none; }
+.tour-duration.soon { background: var(--gold); color: #fff; }
+.tour-duration.soon svg { color: #fff; }
+
+/* circular arrow button, top-right of the image */
+.tour-arrow { position: absolute; top: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.25); transition: background .3s var(--ease), transform .3s var(--ease); }
+.tour-arrow svg { width: 16px; height: 16px; }
+.tour-card:hover .tour-arrow { background: var(--gold-dark); transform: scale(1.08); }
+
+.tour-card-body { padding: 1.6rem 1.7rem 1.7rem; display: flex; flex-direction: column; flex: 1; }
+.tour-card-body h3 { margin-bottom: 0.6rem; }
+.tour-card-body h3 a { color: inherit; }
+.tour-card-body h3 a:hover { color: var(--gold-dark); }
+.tour-card-body p { font-size: 0.97rem; color: var(--ink-soft); margin-bottom: 1.3rem; flex: 1; }
+
+.tour-card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.1rem; border-top: 1px solid var(--line-soft); }
+.tour-loc { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+.tour-loc svg { width: 15px; height: 15px; color: var(--gold-dark); flex: none; }
+.tour-price-tag { font-family: var(--sans); font-weight: 700; color: var(--ink); font-size: 1.02rem; white-space: nowrap; }
+.tour-price-tag .per { font-weight: 400; color: var(--muted); font-size: 0.78rem; }
+.tour-price-tag.soon { font-weight: 600; color: var(--gold-dark); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* --------------------------------------------------------------- tour detail (tours page) */
 .tour-detail { border-top: 1px solid var(--line); padding: clamp(3rem,6vw,4.5rem) 0; scroll-margin-top: 90px; }
@@ -406,7 +426,6 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 
 .coming-soon-note { background: var(--gold-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.4rem; color: var(--gold-dark); font-size: 0.95rem; margin: 1.5rem 0; }
 .coming-soon-note strong { color: var(--ink); }
-.tour-price.soon { background: var(--gold); color: #fff; }
 
 /* --------------------------------------------------------------- reviews (trustindex) */
 .reviews-section { text-align: center; }
