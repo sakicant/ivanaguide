@@ -459,6 +459,8 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   .incl-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .portrait-badge { right: 0; }
+  /* Mobile only: hide the eyebrow label directly above an h1 (kept on desktop). */
+  .eyebrow:has(+ h1) { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
