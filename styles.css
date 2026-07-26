@@ -498,10 +498,16 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   .eyebrow:has(+ h1) { display: none; }
   /* Mobile only: restore breathing room above h1 now that its eyebrow is hidden. */
   h1 { margin-top: 20px; }
-  /* Mobile only: stack the credentials strip (one per row) instead of wrapping 2+1. */
-  .credentials { flex-direction: column; gap: 1rem; }
+  /* Mobile only: stack the credentials strip (one per row) instead of wrapping 2+1,
+     centered, with no closing border-bottom - the section's background-colour
+     change into the next (tan) section acts as the divider instead. */
+  .credentials { flex-direction: column; gap: 1rem; text-align: center; border-bottom: none; }
   .credentials div { min-width: 0; }
   .credentials div + div { padding-top: 1rem; border-top: 1px solid var(--line-soft); }
+  /* Mobile only: close the gap between the hero section and the story section
+     right below the credentials strip, so the tan background starts flush. */
+  .about-hero-section.pb-tight { padding-bottom: 0; }
+  .about-story-section.pt-tight { padding-top: 2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
