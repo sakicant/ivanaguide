@@ -25,14 +25,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/contact/"/>
   </url>
   <url>
-    <loc>https://ivanaguide.com/privacy-policy/</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ivanaguide.com/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ivanaguide.com/privacy-policy/"/>
-  </url>
-  <url>
     <loc>https://ivanaguide.com/tours/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>

@@ -225,6 +225,8 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     html = html.replace("{{DESCRIPTION}}", meta["description"])
     html = html.replace("{{KEYWORDS}}", meta.get("keywords", ""))
     html = html.replace("{{CANONICAL}}", canonical)
+    robots_tag = '<meta name="robots" content="noindex, follow">' if meta.get("noindex") else ""
+    html = html.replace("{{ROBOTS}}", robots_tag)
     html = html.replace("{{HREFLANGS}}", hreflang_block)
     html = html.replace("{{OG_IMAGE}}", meta.get("og_image", DEFAULT_OG_IMAGE))
     html = html.replace("{{SCHEMA}}", schema_block)
@@ -259,6 +261,8 @@ def write_sitemap(pages):
         default_lang = DEFAULT_LANG if DEFAULT_LANG in variants else next(iter(variants))
         xdefault = canonical_url(default_lang, variants[default_lang].get("slug", ""))
         for lang, meta in variants.items():
+            if meta.get("noindex"):
+                continue  # keep noindex pages (e.g. Privacy Policy) out of the sitemap
             loc = canonical_url(lang, meta.get("slug", ""))
             entries.append((loc, page_priority(meta.get("slug", "")), alts, xdefault))
     entries.sort(key=lambda e: e[0])

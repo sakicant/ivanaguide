@@ -2,5 +2,6 @@
   "slug": "privacy-policy",
   "title": "Privacy Policy | Private Walking Tours by Ivana",
   "description": "How Private Walking Tours by Ivana collects and uses your data: only to respond to booking enquiries and for basic, anonymised website analytics. Nothing else.",
-  "keywords": "privacy policy, data protection, GDPR, Private Walking Tours by Ivana"
+  "keywords": "privacy policy, data protection, GDPR, Private Walking Tours by Ivana",
+  "noindex": true
 }
