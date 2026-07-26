@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=e99e9bdb64">
+<link rel="stylesheet" href="/styles.css?v=56e30efdc4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -270,19 +270,89 @@
     </div>
 
     <!-- ============================================================
-         TRUSTINDEX REVIEW WIDGET
-         Paste the embed code from your Trustindex dashboard between the
-         markers below (replace the .reviews-placeholder box), then run
-         `python build.py`. Trustindex aggregates the Tripadvisor + Facebook
-         reviews into one widget.
+         STATIC REVIEWS - pulled by hand from Tripadvisor + Facebook,
+         not a live widget (client declined Trustindex). These do NOT
+         update automatically. To refresh: revisit the two profiles
+         below, copy any new reviews worth featuring into the markup
+         below (a handful is plenty - link out to the full profile for
+         the rest), update the rating-summary numbers, then rebuild.
+         Tripadvisor: https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html
+         Facebook:    https://www.facebook.com/deborahguidedtours/
          ============================================================ -->
-    <div class="reviews-placeholder reveal">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg>
-      <p><strong>Trustindex review widget goes here.</strong></p>
-      <p>Paste the Trustindex embed code into <code>src/partials/reviews.html</code> and rebuild. It will pull in the Tripadvisor and Facebook reviews automatically.</p>
-      <a href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Read reviews on Tripadvisor</a>
+
+    <div class="review-summary reveal">
+      <div class="review-stars" aria-hidden="true">★★★★★</div>
+      <p><strong>5.0</strong> out of 5, based on 10 reviews on Tripadvisor, plus more on Facebook</p>
     </div>
-    <!-- ============================================================ -->
+
+    <div class="review-grid">
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;Ivana gave a fantastic insiders tour of Sibenik. Her warm and inviting style made us feel welcome in her home town, which she clearly loves. We highly recommend and wish we could give more than 5 stars.&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">Ken P.</span>
+          <span class="review-loc">Sandy Spring, Maryland</span>
+        </div>
+        <a class="review-source" href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" target="_blank" rel="noopener">Tripadvisor</a>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;From the moment we met Ivana, we knew she was an expert - not only speaking excellent English, but also sharing from an abundance of knowledge and understanding about the fascinating city of Sibenik.&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">Cathie V.</span>
+          <span class="review-loc">Pemba, Mozambique</span>
+        </div>
+        <a class="review-source" href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" target="_blank" rel="noopener">Tripadvisor</a>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;I had the pleasure of exploring town Šibenik with Ivana as my guide, and I couldn&rsquo;t have asked for a better experience! From the moment we met, her warmth, enthusiasm, and deep knowledge of the area made the tour both engaging and unforgettable.&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">Anja P.</span>
+          <span class="review-loc">Solo traveller</span>
+        </div>
+        <a class="review-source" href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" target="_blank" rel="noopener">Tripadvisor</a>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;Ivana does an incredible tour of Sibenik. I&rsquo;ve done it twice! She took my family around town and gave them the very best overview of the history of the city, with recommendations on the best places to visit, eat and drink.&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">Rebecca N.</span>
+          <span class="review-loc">Returning guest</span>
+        </div>
+        <a class="review-source" href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" target="_blank" rel="noopener">Tripadvisor</a>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;My family of 4 had a wonderful tour with Ivana! We learned a lot about Sibenik and my girls (ages 10 &amp; 13) picked up some fun facts along the way. It&rsquo;s rare to have a tour guide who grew up in the old town and still lives there.&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">newp0rt99</span>
+          <span class="review-loc">New York City</span>
+        </div>
+        <a class="review-source" href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" target="_blank" rel="noopener">Tripadvisor</a>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-stars" aria-hidden="true">★★★★★</div>
+        <p class="review-quote">&ldquo;I had a great time wisiting Krka national park, Skradin and Šibenik with Ivana. She always has interesting authentic stories to tell. She is very nice and friendly person. I would recommend visiting any location with her!&rdquo;</p>
+        <div class="review-who">
+          <span class="review-name">Ivana R.</span>
+          <span class="review-loc">Facebook</span>
+        </div>
+        <a class="review-source" href="https://www.facebook.com/deborahguidedtours/" target="_blank" rel="noopener">Facebook</a>
+      </article>
+
+    </div>
+
+    <div class="review-more reveal">
+      <a href="https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Read all reviews on Tripadvisor</a>
+      <a href="https://www.facebook.com/deborahguidedtours/" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Read reviews on Facebook</a>
+    </div>
 
   </div>
 </section>
@@ -375,6 +445,6 @@
     <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1 1-3.8-.3-.4a10.2 10.2 0 01-1.6-5.6c0-5.7 4.7-10.4 10.5-10.4S26.5 9.8 26.5 15.5 21.8 25.6 16 25.6zm5.9-7.7c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
   </a>
 </div>
-<script src="/script.js?v=e99e9bdb64"></script>
+<script src="/script.js?v=56e30efdc4"></script>
 </body>
 </html>
