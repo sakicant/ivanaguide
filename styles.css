@@ -244,13 +244,14 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .hero .eyebrow { color: #efd7ad; font-size: 0.98rem; letter-spacing: 0.3em; margin-bottom: 2.4rem; }
 .hero h1 { color: #fff; text-shadow: 0 2px 30px rgba(0,0,0,.35); }
 .hero-trust {
-  display: inline-flex; align-items: center; gap: 0.6rem; margin: 1.1rem 0 1.6rem;
-  font-family: var(--sans); font-size: 0.88rem; color: #f3ece2; text-decoration: none;
-  padding: 0.4rem 0.9rem 0.4rem 0.7rem; border: 1px solid rgba(255,255,255,.3); border-radius: 30px;
-  background: rgba(17,24,18,.25); backdrop-filter: blur(2px); transition: border-color .2s var(--ease), background .2s var(--ease);
+  display: inline-flex; align-items: center; gap: 0.7rem; margin: 1.2rem 0 1.7rem;
+  font-family: var(--sans); font-size: 1rem; color: #f3ece2; text-decoration: none;
+  padding: 0.55rem 1.2rem 0.55rem 0.95rem; border: 1px solid rgba(255,255,255,.4); border-radius: 30px;
+  background: rgba(17,24,18,.4); backdrop-filter: blur(3px); box-shadow: 0 6px 20px rgba(0,0,0,.2);
+  transition: border-color .2s var(--ease), background .2s var(--ease);
 }
-.hero-trust:hover { color: #fff; border-color: rgba(255,255,255,.6); background: rgba(17,24,18,.4); }
-.hero-trust-stars { color: var(--gold); letter-spacing: 0.1em; font-size: 0.9rem; }
+.hero-trust:hover { color: #fff; border-color: rgba(255,255,255,.65); background: rgba(17,24,18,.55); }
+.hero-trust-stars { color: var(--gold); letter-spacing: 0.1em; font-size: 1.05rem; }
 .hero-trust-text strong { color: #fff; font-weight: 700; }
 .hero-sub { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #f3ece2; max-width: 620px; margin-bottom: 2rem; font-weight: 400; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -572,6 +573,8 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
      right below the credentials strip, so the tan background starts flush. */
   .about-hero-section.pb-tight { padding-bottom: 0; }
   .about-story-section.pt-tight { padding-top: 2rem; }
+  /* Mobile only: center the hero trust badge (left-aligned on desktop). */
+  .hero-trust { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
