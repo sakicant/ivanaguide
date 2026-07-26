@@ -1,4 +1,4 @@
-/* Private Walking Tours by Ivana — small, dependency-free interactions */
+/* Private Walking Tours by Ivana - small, dependency-free interactions */
 (function () {
   "use strict";
 
@@ -56,7 +56,7 @@
       // If the endpoint is still the placeholder, don't pretend it sent.
       if (action.indexOf("YOUR_FORM_ID") !== -1) {
         e.preventDefault();
-        showStatus("Form not connected yet — please use WhatsApp or email for now.", "warn");
+        showStatus("Form not connected yet - please use WhatsApp or email for now.", "warn");
         return;
       }
       e.preventDefault();
@@ -70,7 +70,7 @@
       }).then(function (r) {
         if (r.ok) {
           form.reset();
-          showStatus("Thank you — your request is on its way. Ivana will reply personally, usually within a few hours.", "ok");
+          showStatus("Thank you - your request is on its way. Ivana will reply personally, usually within a few hours.", "ok");
         } else {
           showStatus("Something went wrong. Please reach out on WhatsApp or by email instead.", "warn");
         }
@@ -99,6 +99,27 @@
       void waFloat.offsetWidth;
       waFloat.classList.add("wa-show");
     }, 3000);
+  }
+
+  // ---- cookie consent bar --------------------------------------------------
+  var cookieBar = document.getElementById("cookieBar");
+  if (cookieBar) {
+    var CONSENT_KEY = "ivanaguide_cookie_consent";
+    var saved = null;
+    try { saved = window.localStorage.getItem(CONSENT_KEY); } catch (e) { /* storage blocked */ }
+    if (!saved) {
+      cookieBar.hidden = false;
+    }
+    var respond = function (value) {
+      try { window.localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* storage blocked */ }
+      cookieBar.hidden = true;
+      // If analytics are added later, gate loading them behind:
+      // window.localStorage.getItem(CONSENT_KEY) === "accepted"
+    };
+    var acceptBtn = document.getElementById("cookieAccept");
+    var declineBtn = document.getElementById("cookieDecline");
+    if (acceptBtn) acceptBtn.addEventListener("click", function () { respond("accepted"); });
+    if (declineBtn) declineBtn.addEventListener("click", function () { respond("declined"); });
   }
 
   // ---- current year (footer fallback if not built) ------------------------

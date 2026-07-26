@@ -194,6 +194,7 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     canonical = canonical_url(lang, slug)
     header_html = load_partial("header", lang).replace("{{NAV}}", build_nav(slug, lang))
     footer_html = load_partial("footer", lang)
+    cookie_banner_html = load_partial("cookie-banner", lang)
 
     schema = meta.get("schema")
     schema_list = schema if isinstance(schema, list) else ([schema] if schema else [])
@@ -230,6 +231,7 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     html = html.replace("{{ASSET_VERSION}}", ASSET_VERSION)
     html = html.replace("{{HEADER}}", header_html)
     html = html.replace("{{FOOTER}}", footer_html)
+    html = html.replace("{{COOKIE_BANNER}}", cookie_banner_html)
     html = html.replace("{{BODY}}", body)
     html = apply_config(html)
 

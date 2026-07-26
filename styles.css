@@ -243,7 +243,7 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .tour-duration.soon svg { color: #fff; }
 
 /* circular arrow button, top-right of the image */
-.tour-arrow { position: absolute; top: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.25); transition: background .3s var(--ease), transform .3s var(--ease); }
+.tour-arrow { position: absolute; bottom: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.25); transition: background .3s var(--ease), transform .3s var(--ease); }
 .tour-arrow svg { width: 16px; height: 16px; }
 .tour-card:hover .tour-arrow { background: var(--gold-dark); transform: scale(1.08); }
 
@@ -340,6 +340,24 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
 .field textarea { min-height: 130px; resize: vertical; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.field-checkbox { margin-bottom: 1.4rem; }
+.checkbox-label { display: flex; align-items: flex-start; gap: 0.7rem; cursor: pointer; font-size: 0.86rem; line-height: 1.5; color: var(--ink-soft); }
+.checkbox-label input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none; flex: none; width: 19px; height: 19px; margin-top: 1px;
+  border: 1.5px solid var(--line); border-radius: 4px; background: var(--bg); cursor: pointer;
+  display: grid; place-items: center; transition: border-color .2s var(--ease), background .2s var(--ease);
+}
+.checkbox-label input[type="checkbox"]::after {
+  content: ""; width: 10px; height: 10px; clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 45% 62%);
+  background: #fff; transform: scale(0); transition: transform .15s var(--ease);
+}
+.checkbox-label input[type="checkbox"]:checked { background: var(--gold); border-color: var(--gold); }
+.checkbox-label input[type="checkbox"]:checked::after { transform: scale(1); }
+.checkbox-label input[type="checkbox"]:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--gold-soft); }
+.checkbox-label a { color: var(--gold-dark); }
+.checkbox-label a:hover { color: var(--ink); }
+
 .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
 .form-status { margin-top: 1rem; padding: 0.8rem 1rem; border-radius: var(--radius); font-size: 0.92rem; }
 .form-status.ok { background: #e7f0e8; color: #2f5d3a; border: 1px solid #bcd6c1; }
@@ -386,8 +404,25 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .wa-btn:hover .wa-tip, .wa-btn:focus-visible .wa-tip { opacity: 1; transform: translateY(-50%) translateX(0); }
 @media (max-width: 720px) { .wa-float { right: 16px; bottom: 16px; } .wa-btn { width: 54px; height: 54px; } .wa-tip { display: none; } }
 @media (prefers-reduced-motion: reduce) { .wa-btn::after { animation: none; } }
+
+/* cookie consent bar: small, bottom-left, clear of the WhatsApp button */
+.cookie-bar { position: fixed; left: 18px; bottom: 18px; z-index: 190; max-width: 340px; background: var(--ink-deep); color: #dbe6e1; padding: 1rem 1.1rem; border-radius: 10px; box-shadow: 0 14px 34px rgba(0,0,0,.32); font-size: 0.8rem; line-height: 1.5; }
+.cookie-bar[hidden] { display: none; }
+.cookie-bar p { margin: 0 0 0.8rem; }
+.cookie-bar a { color: var(--gold); }
+.cookie-bar a:hover { color: #fff; }
+.cookie-actions { display: flex; gap: 0.6rem; }
+.cookie-btn { flex: 1; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.55rem 0.6rem; border-radius: 6px; border: 1px solid transparent; cursor: pointer; transition: all .2s var(--ease); }
+.cookie-accept { background: var(--gold); color: #fff; }
+.cookie-accept:hover { background: var(--gold-dark); }
+.cookie-decline { background: transparent; color: #dbe6e1; border-color: rgba(255,255,255,.3); }
+.cookie-decline:hover { border-color: #fff; }
+@media (max-width: 720px) { .cookie-bar { left: 12px; right: auto; bottom: 12px; max-width: calc(100vw - 92px); } }
 .footer-bottom { border-top: 1px solid #214443; padding: 1.4rem 0; text-align: center; font-size: 0.78rem; color: #6f817c; }
 .footer-bottom p { margin: 0; }
+.footer-bottom p + p { margin-top: 0.35rem; }
+.footer-bottom a { color: #9aa89f; }
+.footer-bottom a:hover { color: var(--gold); }
 
 /* --------------------------------------------------------------- breadcrumbs */
 .crumbs { width: min(var(--wrap), 92%); margin: 1.4rem auto 0; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.02em; }
@@ -461,6 +496,8 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
   .portrait-badge { right: 0; }
   /* Mobile only: hide the eyebrow label directly above an h1 (kept on desktop). */
   .eyebrow:has(+ h1) { display: none; }
+  /* Mobile only: restore breathing room above h1 now that its eyebrow is hidden. */
+  h1 { margin-top: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
