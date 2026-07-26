@@ -22,6 +22,38 @@
     });
   }
 
+  // ---- language switcher dropdown ------------------------------------------
+  var langDropdowns = document.querySelectorAll(".nav-dropdown");
+  langDropdowns.forEach(function (dd) {
+    var toggleBtn = dd.querySelector(".nav-dropdown-toggle");
+    if (!toggleBtn) return;
+    toggleBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = dd.classList.contains("open");
+      langDropdowns.forEach(function (other) {
+        other.classList.remove("open");
+        var btn = other.querySelector(".nav-dropdown-toggle");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        dd.classList.add("open");
+        toggleBtn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  document.addEventListener("click", function () {
+    langDropdowns.forEach(function (dd) {
+      dd.classList.remove("open");
+      var btn = dd.querySelector(".nav-dropdown-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      langDropdowns.forEach(function (dd) { dd.classList.remove("open"); });
+    }
+  });
+
   // ---- header shadow on scroll -------------------------------------------
   var header = document.getElementById("siteHeader");
   if (header) {

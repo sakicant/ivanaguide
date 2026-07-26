@@ -22,7 +22,14 @@ PAGES_DIR = os.path.join(SRC, "pages")
 PARTIALS_DIR = os.path.join(SRC, "partials")
 
 DEFAULT_LANG = "en"
-LANGUAGES = ["en"]  # add "hr", "de", ... here as translations are created
+# English is live; Croatian and Russian are wired up (switcher, hreflang,
+# sitemap) but have no translated pages yet — they show as "Coming soon" in
+# the switcher until a src/pages/<page-id>/hr|ru/ folder actually exists.
+LANGUAGES = ["en", "hr", "ru"]
+
+# Native-language label + short code, used by the language switcher.
+LANGUAGE_NAMES = {"en": "English", "hr": "Hrvatski", "ru": "Русский"}
+LANGUAGE_CODES = {"en": "EN", "hr": "HR", "ru": "RU"}
 
 # ---------------------------------------------------------------------------
 # CONFIG — the only place site-wide details live. Swap placeholders for the
@@ -62,9 +69,9 @@ SITE_URL = CONFIG["SITE_URL"]
 DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/img/sibenik-cathedral-st-james-square-sunset-land.webp"
 YEAR = str(datetime.date.today().year)
 
-HOME_LABEL = {"en": "Home"}
-# Parent-section labels for nested slugs (e.g. tours/old-town -> "Tours").
-SECTION_LABELS = {"tours": "Tours"}
+HOME_LABEL = {"en": "Home", "hr": "Početna", "ru": "Главная"}
+# Parent-section labels for nested slugs (e.g. tours/old-town -> "Tours"), per language.
+SECTION_LABELS = {"tours": {"en": "Tours", "hr": "Ture", "ru": "Туры"}}
 
 
 def compute_asset_version():
@@ -185,6 +192,49 @@ def build_nav(current_slug, lang):
     return "\n        ".join(links)
 
 
+def _lang_items(variants, current_lang):
+    """Languages with an actual translated variant of this page link to it;
+    languages with none yet render as a disabled "Coming soon" entry."""
+    items = []
+    for lang in LANGUAGES:
+        code, name = LANGUAGE_CODES[lang], LANGUAGE_NAMES[lang]
+        if lang in variants:
+            url = url_path(lang, variants[lang].get("slug", ""))
+            cls = "nav-lang-item active" if lang == current_lang else "nav-lang-item"
+            items.append(f'<a href="{url}" class="{cls}"><span class="nav-lang-code">{code}</span>'
+                         f'<span class="nav-lang-name">{name}</span></a>')
+        else:
+            items.append(f'<span class="nav-lang-item soon"><span class="nav-lang-code">{code}</span>'
+                         f'<span class="nav-lang-name">{name}</span><span class="nav-lang-soon">Coming soon</span></span>')
+    return items
+
+
+GLOBE_ICON = ('<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6">'
+              '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z"/></svg>')
+
+
+def build_lang_switcher(variants, current_lang):
+    """Desktop: a dropdown button (current language code) that opens the list."""
+    menu_items = "\n          ".join(_lang_items(variants, current_lang))
+    current_code = LANGUAGE_CODES[current_lang]
+    return f'''<div class="nav-dropdown nav-lang-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+          {GLOBE_ICON} {current_code} <span class="caret"></span>
+        </button>
+        <div class="nav-dropdown-menu">
+          {menu_items}
+        </div>
+      </div>'''
+
+
+def build_lang_switcher_mobile(variants, current_lang):
+    """Mobile: the same language list shown flat (mobile-nav is already the
+    expanded state, so a second collapsible dropdown inside it is redundant)."""
+    items = "\n      ".join(_lang_items(variants, current_lang))
+    return f'''<div class="mobile-lang-label">{GLOBE_ICON} Language</div>
+    {items}'''
+
+
 def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     slug = meta.get("slug", "")
     body = read(content_path)
@@ -193,6 +243,8 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
 
     canonical = canonical_url(lang, slug)
     header_html = load_partial("header", lang).replace("{{NAV}}", build_nav(slug, lang))
+    header_html = header_html.replace("{{LANG_SWITCHER}}", build_lang_switcher(variants, lang))
+    header_html = header_html.replace("{{LANG_SWITCHER_MOBILE}}", build_lang_switcher_mobile(variants, lang))
     footer_html = load_partial("footer", lang)
     cookie_banner_html = load_partial("cookie-banner", lang)
 
@@ -205,7 +257,7 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
         if "/" in slug:  # nested page -> insert its parent section crumb
             parent = slug.split("/")[0]
             crumbs.append({"@type": "ListItem", "position": pos,
-                           "name": SECTION_LABELS.get(parent, parent.title()),
+                           "name": SECTION_LABELS.get(parent, {}).get(lang, parent.title()),
                            "item": canonical_url(lang, parent)})
             pos += 1
         crumbs.append({"@type": "ListItem", "position": pos,
