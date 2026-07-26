@@ -57,6 +57,12 @@ CONFIG = {
     "FACEBOOK": "https://www.facebook.com/deborahguidedtours/",
     "TRIPADVISOR": "https://www.tripadvisor.com/Attraction_Review-g295375-d32954187-Reviews-Guided_Tours_by_Ivana-Sibenik_Sibenik_Knin_County_Dalmatia.html",
 
+    # Cross-promotion: Antonio is Ivana's friend, a top-rated local Šibenik
+    # taxi driver — recommended for guests who need a ride to/from the
+    # meeting point (tours don't include transport). Also built this site.
+    "TAXI_ANTONIO_URL": "https://taxisibenik.hr",
+    "ANTONIODIGITAL_URL": "https://antoniodigital.com",
+
     # PLACEHOLDER — create a free form endpoint (e.g. Formspree) and paste the
     # action URL here. Until then the form posts nowhere.
     "FORM_ENDPOINT": "https://formspree.io/f/YOUR_FORM_ID",
