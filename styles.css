@@ -509,8 +509,20 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .booking-card .btn { margin-bottom: 0.7rem; }
 .booking-card .meet { font-size: 0.8rem; color: var(--muted); margin: 0.8rem 0 0; }
 
-.coming-soon-note { background: var(--gold-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.4rem; color: var(--gold-dark); font-size: 0.95rem; margin: 1.5rem 0; }
-.coming-soon-note strong { color: var(--ink); }
+.tour-note { background: var(--gold-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.4rem; color: var(--gold-dark); font-size: 0.95rem; margin: 1.5rem 0; }
+.tour-note strong { color: var(--ink); }
+
+/* route/pricing option cards (e.g. Krka's three entrance/exit options) */
+.tour-options { display: flex; flex-direction: column; gap: 1.4rem; margin: 1.4rem 0 2rem; }
+.tour-option { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.6rem; scroll-margin-top: 90px; }
+.tour-option-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.6rem 1rem; margin-bottom: 0.2rem; }
+.tour-option-head h3 { margin: 0; font-size: 1.25rem; }
+.tour-option-price { font-family: var(--sans); font-weight: 700; color: var(--gold-dark); font-size: 1.05rem; white-space: nowrap; }
+.tour-option-price span { font-weight: 400; color: var(--muted); font-size: 0.78rem; }
+.tour-option-tag { font-family: var(--serif); font-style: italic; color: var(--gold-dark); font-size: 1.05rem; margin: 0 0 0.8rem; }
+.tour-option p { font-size: 0.95rem; }
+.tour-option-route { background: var(--bg-alt); border-radius: var(--radius); padding: 0.7rem 0.9rem; font-size: 0.85rem; color: var(--ink-soft); margin: 0.8rem 0 0; }
+.tour-option-route strong { color: var(--ink); }
 
 /* --------------------------------------------------------------- reviews (trustindex) */
 .reviews-section { text-align: center; }
