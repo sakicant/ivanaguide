@@ -252,7 +252,6 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 }
 .hero-trust:hover { color: #fff; border-color: rgba(255,255,255,.65); background: rgba(17,24,18,.55); }
 .hero-trust-stars { color: var(--gold); letter-spacing: 0.1em; font-size: 1.05rem; }
-.hero-trust-text strong { color: #fff; font-weight: 700; }
 .hero-sub { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #f3ece2; max-width: 620px; margin-bottom: 2rem; font-weight: 400; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 1.4rem 2.2rem; margin-top: 2.6rem; font-size: 0.82rem; letter-spacing: 0.04em; color: #eee5d8; }
@@ -282,22 +281,27 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 .tour-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.tour-card-media { position: relative; aspect-ratio: 3 / 2; overflow: hidden; }
+
+/* framed photo: a margin of card-background shows around the image, and the
+   arrow button (below) straddles the photo's bottom-right corner inside it */
+.tour-card-frame { position: relative; padding: 18px 18px 0; }
+.tour-card-media { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 6px; }
 .tour-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .tour-card:hover .tour-card-media img { transform: scale(1.05); }
 
-/* duration pill, top-left of the image */
-.tour-duration { position: absolute; top: 1rem; left: 1rem; display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(250,247,241,.95); color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.02em; padding: 0.4rem 0.8rem 0.4rem 0.65rem; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+/* duration pill, top-right of the image */
+.tour-duration { position: absolute; top: 0.85rem; right: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(250,247,241,.95); color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.02em; padding: 0.4rem 0.8rem 0.4rem 0.65rem; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,.15); }
 .tour-duration svg { width: 13px; height: 13px; color: var(--gold-dark); flex: none; }
 .tour-duration.soon { background: var(--gold); color: #fff; }
 .tour-duration.soon svg { color: #fff; }
 
-/* circular arrow button, top-right of the image */
-.tour-arrow { position: absolute; bottom: 1rem; right: 1rem; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.25); transition: background .3s var(--ease), transform .3s var(--ease); }
+/* circular arrow button, straddling the photo's bottom-right corner -
+   half on the photo, half on the card margin, pointing back at the image */
+.tour-arrow { position: absolute; right: 10px; bottom: -19px; width: 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.3); transition: background .3s var(--ease), transform .3s var(--ease); z-index: 2; }
 .tour-arrow svg { width: 16px; height: 16px; }
 .tour-card:hover .tour-arrow { background: var(--gold-dark); transform: scale(1.08); }
 
-.tour-card-body { padding: 1.6rem 1.7rem 1.7rem; display: flex; flex-direction: column; flex: 1; }
+.tour-card-body { padding: 1.6rem 18px 1.7rem; display: flex; flex-direction: column; flex: 1; }
 .tour-card-body h3 { margin-bottom: 0.6rem; }
 .tour-card-body h3 a { color: inherit; }
 .tour-card-body h3 a:hover { color: var(--gold-dark); }
@@ -518,7 +522,6 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .review-stars { color: var(--gold); font-size: 1.05rem; letter-spacing: 0.15em; line-height: 1; }
 .review-summary { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin: 0 auto 2.8rem; }
 .review-summary p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
-.review-summary strong { font-family: var(--serif); font-size: 1.3rem; color: var(--ink); }
 
 .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.6rem; text-align: left; }
 .review-card {
