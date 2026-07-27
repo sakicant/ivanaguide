@@ -158,11 +158,7 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 }
 .brand { display: flex; align-items: center; gap: 0.7rem; color: var(--ink); }
 .brand:hover { color: var(--ink); }
-.brand-mark {
-  width: 42px; height: 42px; flex: none; display: grid; place-items: center;
-  border: 1px solid var(--gold); color: var(--gold);
-  font-family: var(--logo); font-size: 1.4rem; border-radius: 50%;
-}
+.brand-mark { height: 56px; width: auto; flex: none; display: block; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name { font-family: var(--logo); font-size: 1.32rem; color: var(--ink); letter-spacing: .5px; }
 .brand-sub { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-top: 2px; }
