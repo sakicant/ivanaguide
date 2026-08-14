@@ -352,6 +352,15 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .photo-gallery img.g-vert { aspect-ratio: 4 / 5; }
 .meet-photo { border-radius: var(--radius); box-shadow: var(--shadow-sm); width: 100%; max-width: 320px; aspect-ratio: 4 / 5; object-fit: cover; margin: 1rem 0 1.4rem; }
 
+/* Editorial photo layouts for tour detail pages: full-width captioned features
+   and side-by-side pairs, interleaved with the copy instead of one big grid. */
+.photo-feature { margin: 2.2rem 0; }
+.photo-feature img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.photo-feature figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.6rem; font-style: italic; text-align: center; }
+.photo-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 2.2rem 0; }
+.photo-duo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; box-shadow: var(--shadow-sm); display: block; }
+.photo-duo.duo-land img { aspect-ratio: 3 / 2; }
+
 /* --------------------------------------------------------------- split feature (about teaser / why) */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split.reverse .split-media { order: 2; }
@@ -595,6 +604,8 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .hero-trust { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
   /* Mobile only: fixed 2-column gallery reads cleaner than auto-fill on narrow screens. */
   .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  /* Mobile only: side-by-side landscapes get too small, so stack them (portrait pairs stay side by side). */
+  .photo-duo.duo-land { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
