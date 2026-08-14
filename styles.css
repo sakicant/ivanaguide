@@ -345,6 +345,13 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 
 .tour-cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.6rem; }
 
+/* --------------------------------------------------------------- photo gallery */
+.photo-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin: 0.4rem 0 2.2rem; }
+.photo-gallery img { width: 100%; border-radius: 6px; object-fit: cover; display: block; box-shadow: var(--shadow-sm); }
+.photo-gallery img.g-land { aspect-ratio: 3 / 2; }
+.photo-gallery img.g-vert { aspect-ratio: 4 / 5; }
+.meet-photo { border-radius: var(--radius); box-shadow: var(--shadow-sm); width: 100%; max-width: 320px; aspect-ratio: 4 / 5; object-fit: cover; margin: 1rem 0 1.4rem; }
+
 /* --------------------------------------------------------------- split feature (about teaser / why) */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split.reverse .split-media { order: 2; }
@@ -586,6 +593,8 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .about-story-section.pt-tight { padding-top: 2rem; }
   /* Mobile only: center the hero trust badge (left-aligned on desktop). */
   .hero-trust { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
+  /* Mobile only: fixed 2-column gallery reads cleaner than auto-fill on narrow screens. */
+  .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
