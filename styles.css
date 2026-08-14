@@ -360,6 +360,8 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .photo-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 2.2rem 0; }
 .photo-duo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; box-shadow: var(--shadow-sm); display: block; }
 .photo-duo.duo-land img { aspect-ratio: 3 / 2; }
+.photo-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 2.2rem 0; }
+.photo-trio img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; box-shadow: var(--shadow-sm); display: block; }
 
 /* --------------------------------------------------------------- split feature (about teaser / why) */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
@@ -430,6 +432,13 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .form-status.warn { background: #f8ece4; color: #8a4b32; border: 1px solid #e6c9b7; }
 
 .map-embed { border: 0; width: 100%; height: 320px; border-radius: var(--radius); margin-top: 1.5rem; filter: grayscale(0.2) contrast(0.95); }
+/* Meeting-point photo + map side by side; photo matches the map's height. */
+.meet-media { display: grid; grid-template-columns: 240px 1fr; gap: 12px; align-items: end; }
+.meet-media .meet-photo { margin: 1.5rem 0 0; max-width: none; aspect-ratio: auto; height: 320px; }
+@media (max-width: 720px) {
+  .meet-media { grid-template-columns: 1fr; }
+  .meet-media .meet-photo { height: auto; aspect-ratio: 4 / 5; max-width: 320px; }
+}
 
 /* --------------------------------------------------------------- cta band */
 .cta-band { background: var(--ink); color: #e7ddce; text-align: center; padding: clamp(4rem, 8vw, 6rem) 0; position: relative; }
@@ -606,6 +615,9 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   /* Mobile only: side-by-side landscapes get too small, so stack them (portrait pairs stay side by side). */
   .photo-duo.duo-land { grid-template-columns: 1fr; }
+  /* Mobile only: 3-up rows get too small, so the first photo goes full width with the other two beneath. */
+  .photo-trio { grid-template-columns: 1fr 1fr; }
+  .photo-trio img:first-child { grid-column: 1 / -1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
