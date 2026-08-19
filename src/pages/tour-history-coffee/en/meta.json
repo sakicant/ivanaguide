@@ -3,14 +3,14 @@
   "title": "Private Šibenik History & Coffee with a Local Guide | Private Walking Tours by Ivana",
   "description": "A private Šibenik walking tour plus a relaxed coffee with your local guide. History, hidden corners, and authentic local recommendations. About 3 hours, €180 per group.",
   "keywords": "Šibenik history and coffee tour, Šibenik local experience, private guide Šibenik coffee, authentic Šibenik tour",
-  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-promenade-sunset-land.webp",
+  "og_image": "https://deborah.hr/assets/img/sibenik-old-town-promenade-sunset-land.webp",
   "schema": [
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "History & Coffee with a Local Guide in Šibenik",
       "description": "A private Šibenik walking tour plus a relaxed coffee with your local guide. History, hidden corners, and authentic local recommendations. About 3 hours, €180 per group.",
-      "image": "https://ivanaguide.com/assets/img/sibenik-old-town-promenade-sunset-land.webp",
+      "image": "https://deborah.hr/assets/img/sibenik-old-town-promenade-sunset-land.webp",
       "brand": {
         "@type": "Brand",
         "name": "Private Walking Tours by Ivana"
@@ -20,7 +20,7 @@
         "price": "180",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": "https://ivanaguide.com/tours/history-coffee/"
+        "url": "https://deborah.hr/tours/history-coffee/"
       }
     }
   ]

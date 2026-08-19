@@ -3,14 +3,14 @@
   "title": "Šibenik History & Homeland War Private Walking Tour | Private Walking Tours by Ivana",
   "description": "The full story of Šibenik in one private walking tour: medieval and Renaissance heritage woven together with the Croatian Homeland War and a local guide's memories. 2.5–3 hours, €240 per group.",
   "keywords": "Šibenik history tour, Šibenik homeland war walking tour, private Šibenik guide, Šibenik cathedral fortress tour",
-  "og_image": "https://ivanaguide.com/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
+  "og_image": "https://deborah.hr/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
   "schema": [
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "History & Homeland War Private Tour in Šibenik",
       "description": "The full story of Šibenik in one private walking tour: medieval and Renaissance heritage woven together with the Croatian Homeland War and a local guide's memories. 2.5–3 hours, €240 per group.",
-      "image": "https://ivanaguide.com/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
+      "image": "https://deborah.hr/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
       "brand": {
         "@type": "Brand",
         "name": "Private Walking Tours by Ivana"
@@ -20,7 +20,7 @@
         "price": "240",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": "https://ivanaguide.com/tours/history-homeland-war/"
+        "url": "https://deborah.hr/tours/history-homeland-war/"
       }
     }
   ]

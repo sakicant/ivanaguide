@@ -44,8 +44,8 @@ CONFIG = {
     "LEGAL_NAME": "Deborah, obrt za usluge, vl. Ivana Kučić",
 
     # PLACEHOLDER — no domain yet. Replace both when the domain is registered.
-    "SITE_URL": "https://ivanaguide.com",
-    "EMAIL": "info@ivanaguide.com",              # PLACEHOLDER
+    "SITE_URL": "https://deborah.hr",
+    "EMAIL": "ivana@deborah.hr",
 
     "PHONE_DISPLAY": "+385 95 527 8924",
     "PHONE_E164": "+385955278924",

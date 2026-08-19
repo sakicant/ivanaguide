@@ -28,8 +28,8 @@ All site-wide details live in one place: the `CONFIG` block at the top of
 
 | What | Where | Current value |
 |------|-------|---------------|
-| Domain | `SITE_URL` in `build.py` | `https://ivanaguide.com` *(placeholder)* |
-| Booking email | `EMAIL` in `build.py` | `info@ivanaguide.com` *(placeholder)* |
+| Domain | `SITE_URL` in `build.py` | `https://deborah.hr` *(placeholder)* |
+| Booking email | `EMAIL` in `build.py` | `ivana@deborah.hr` *(placeholder)* |
 | Instagram URL | `INSTAGRAM` in `build.py` | `#` *(placeholder)* |
 | Facebook URL | `FACEBOOK` in `build.py` | `#` *(placeholder)* |
 | Contact-form endpoint | `FORM_ENDPOINT` in `build.py` | Formspree placeholder |
