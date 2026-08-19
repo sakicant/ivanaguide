@@ -231,7 +231,9 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 /* --------------------------------------------------------------- hero */
 .hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; z-index: -2; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+/* 28% x keeps Ivana (left of frame) in view when narrow viewports crop the sides;
+   25% y protects the faces at the top of the frame when wide viewports crop vertically. */
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 28% 25%; }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(180deg, rgba(7,33,32,.32) 0%, rgba(7,33,32,.12) 40%, rgba(7,33,32,.82) 100%);
