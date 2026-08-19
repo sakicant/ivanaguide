@@ -298,7 +298,7 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .tour-card:hover .tour-arrow { background: var(--gold-dark); transform: scale(1.08); }
 
 .tour-card-body { padding: 1.6rem 18px 1.7rem; display: flex; flex-direction: column; flex: 1; }
-.tour-card-body h3 { margin-bottom: 0.6rem; }
+.tour-card-body h3 { margin-bottom: 0.6rem; font-family: var(--sans); font-weight: 700; letter-spacing: -0.015em; font-size: 1.32rem; }
 .tour-card-body h3 a { color: inherit; }
 .tour-card-body h3 a:hover { color: var(--gold-dark); }
 .tour-card-body p { font-size: 0.97rem; color: var(--ink-soft); margin-bottom: 1.3rem; flex: 1; }
