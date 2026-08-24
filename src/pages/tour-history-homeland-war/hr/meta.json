@@ -1,0 +1,27 @@
+{
+  "slug": "ture/povijest-i-domovinski-rat",
+  "title": "Povijest i Domovinski rat - privatna tura | Privatne ture s Ivanom",
+  "description": "Cijela priča Šibenika u jednoj privatnoj turi: srednjovjekovna i renesansna baština isprepletena s Domovinskim ratom i osobnim sjećanjima vodičice. 2.5–3 sata, 240€ po grupi.",
+  "keywords": "povijesna tura Šibenik, Domovinski rat tura Šibenik, privatna tura baština Šibenik",
+  "og_image": "https://deborah.hr/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Povijest i Domovinski rat - privatna tura Šibenika",
+      "description": "Cijela priča Šibenika u jednoj privatnoj turi: srednjovjekovna i renesansna baština isprepletena s Domovinskim ratom i osobnim sjećanjima vodičice. 2.5–3 sata, 240€ po grupi.",
+      "image": "https://deborah.hr/assets/img/sibenik-old-town-church-tower-fortress-land.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Privatne ture s Ivanom"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "240",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://deborah.hr/hr/ture/povijest-i-domovinski-rat/"
+      }
+    }
+  ]
+}

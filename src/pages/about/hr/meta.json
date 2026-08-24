@@ -1,0 +1,29 @@
+{
+  "slug": "o-meni",
+  "title": "O Ivani - licencirana lokalna vodičica u Šibeniku",
+  "description": "Upoznajte Ivanu: licenciranu turističku vodičicu certificiranu pri Ministarstvu turizma RH, rođenu i odraslu u Šibeniku, bivšu profesoricu i pripovjedačicu svog rodnog grada.",
+  "keywords": "Ivana vodičica Šibenik, licencirana vodičica Šibenik, lokalna vodičica Šibenik, turistički vodič Šibenik",
+  "og_image": "https://deborah.hr/assets/img/sibenik-old-town-steps-sunset-vert.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{OWNER_NAME}}",
+      "jobTitle": "Licencirana turistička vodičica",
+      "worksFor": {
+        "@type": "TravelAgency",
+        "name": "Privatne ture s Ivanom",
+        "@id": "https://deborah.hr/#business"
+      },
+      "homeLocation": {
+        "@type": "City",
+        "name": "Šibenik"
+      },
+      "knowsLanguage": [
+        "hr",
+        "en"
+      ],
+      "description": "Licencirana lokalna vodičica u Šibeniku, certificirana pri Ministarstvu turizma Republike Hrvatske, rođena i odrasla u gradu."
+    }
+  ]
+}

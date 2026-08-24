@@ -1,0 +1,15 @@
+{
+  "slug": "kontakt",
+  "title": "Kontakt i rezervacija privatne ture | Privatne ture s Ivanom",
+  "description": "Zatražite privatnu turu Šibenika. Javite se Ivani putem WhatsAppa, e-pošte ili pošaljite obrazac s datumima i veličinom grupe.",
+  "keywords": "rezervacija ture Šibenik, kontakt vodič Šibenik, zatraži privatnu turu Šibenik, vodič Šibenik WhatsApp",
+  "og_image": "https://deborah.hr/assets/img/sibenik-marina-fishing-boats-sunset-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Kontakt - Privatne ture s Ivanom",
+      "url": "https://deborah.hr/hr/kontakt/"
+    }
+  ]
+}

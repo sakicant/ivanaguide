@@ -1,0 +1,27 @@
+{
+  "slug": "ture/obiteljska-tura",
+  "title": "Obiteljska privatna tura Šibenika | Privatne ture s Ivanom",
+  "description": "Privatna obiteljska pješačka tura Šibenika koju vodi licencirana lokalna vodičica i bivša profesorica. Povijest kroz priče za djecu i odrasle. 1.5–2 sata, 160€ po grupi.",
+  "keywords": "obiteljska tura Šibenik, tura s djecom Šibenik, privatna obiteljska tura, vodič za obitelji Šibenik",
+  "og_image": "https://deborah.hr/assets/img/family-tour-hero-cathedral-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Obiteljska privatna tura Šibenika",
+      "description": "Privatna obiteljska pješačka tura Šibenika koju vodi licencirana lokalna vodičica i bivša profesorica. Povijest kroz priče za djecu i odrasle. 1.5–2 sata, 160€ po grupi.",
+      "image": "https://deborah.hr/assets/img/family-tour-hero-cathedral-land.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Privatne ture s Ivanom"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "160",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://deborah.hr/hr/ture/obiteljska-tura/"
+      }
+    }
+  ]
+}

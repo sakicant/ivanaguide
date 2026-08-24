@@ -76,8 +76,27 @@ DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/img/sibenik-cathedral-st-james-square-sun
 YEAR = str(datetime.date.today().year)
 
 HOME_LABEL = {"en": "Home", "hr": "Početna"}
-# Parent-section labels for nested slugs (e.g. tours/old-town -> "Tours"), per language.
-SECTION_LABELS = {"tours": {"en": "Tours", "hr": "Ture"}}
+# Parent-section labels for nested slugs, keyed by the parent slug as it appears
+# in that language's URL (tours/old-town -> "Tours", ture/stari-grad -> "Ture").
+SECTION_LABELS = {
+    "tours": {"en": "Tours", "hr": "Ture"},
+    "ture": {"en": "Tours", "hr": "Ture"},
+}
+
+# Header nav: (slug per language, label per language). Slugs must match the
+# slug values in each language's meta.json or the links would 404.
+NAV_ITEMS = {
+    "en": [("", "Home"), ("tours", "Tours"), ("about", "About"), ("contact", "Contact")],
+    "hr": [("", "Početna"), ("ture", "Ture"), ("o-meni", "O meni"), ("kontakt", "Kontakt")],
+}
+
+# Small UI strings the build injects rather than reading from a partial.
+UI = {
+    "en": {"language": "Language", "soon": "Coming soon", "og_locale": "en_US",
+           "wa_tip": "Ivana is on WhatsApp, contact her now!"},
+    "hr": {"language": "Jezik", "soon": "Uskoro", "og_locale": "hr_HR",
+           "wa_tip": "Ivana je na WhatsAppu, javite joj se!"},
+}
 
 
 def compute_asset_version():
@@ -184,18 +203,17 @@ def load_partial(name, lang):
 
 def build_nav(current_slug, lang):
     """Header nav with the current page marked active."""
-    items = [
-        ("", "Home"),
-        ("tours", "Tours"),
-        ("about", "About"),
-        ("contact", "Contact"),
-    ]
+    items = NAV_ITEMS.get(lang, NAV_ITEMS[DEFAULT_LANG])
     links = []
     for slug, label in items:
         active = (slug == current_slug) or (slug != "" and current_slug.startswith(slug + "/"))
         cls = "nav-link active" if active else "nav-link"
         links.append(f'<a href="{url_path(lang, slug)}" class="{cls}">{label}</a>')
     return "\n        ".join(links)
+
+
+def _ui(lang, key):
+    return UI.get(lang, UI[DEFAULT_LANG])[key]
 
 
 def _lang_items(variants, current_lang):
@@ -211,7 +229,7 @@ def _lang_items(variants, current_lang):
                          f'<span class="nav-lang-name">{name}</span></a>')
         else:
             items.append(f'<span class="nav-lang-item soon"><span class="nav-lang-code">{code}</span>'
-                         f'<span class="nav-lang-name">{name}</span><span class="nav-lang-soon">Coming soon</span></span>')
+                         f'<span class="nav-lang-name">{name}</span><span class="nav-lang-soon">{_ui(current_lang, "soon")}</span></span>')
     return items
 
 
@@ -237,7 +255,7 @@ def build_lang_switcher_mobile(variants, current_lang):
     """Mobile: the same language list shown flat (mobile-nav is already the
     expanded state, so a second collapsible dropdown inside it is redundant)."""
     items = "\n      ".join(_lang_items(variants, current_lang))
-    return f'''<div class="mobile-lang-label">{GLOBE_ICON} Language</div>
+    return f'''<div class="mobile-lang-label">{GLOBE_ICON} {_ui(current_lang, "language")}</div>
     {items}'''
 
 
@@ -289,6 +307,8 @@ def build_variant(lang, meta, content_path, base_tpl, hreflang_block, variants):
     html = html.replace("{{OG_IMAGE}}", meta.get("og_image", DEFAULT_OG_IMAGE))
     html = html.replace("{{SCHEMA}}", schema_block)
     html = html.replace("{{ASSET_VERSION}}", ASSET_VERSION)
+    html = html.replace("{{OG_LOCALE}}", _ui(lang, "og_locale"))
+    html = html.replace("{{WA_TIP}}", _ui(lang, "wa_tip"))
     html = html.replace("{{HEADER}}", header_html)
     html = html.replace("{{FOOTER}}", footer_html)
     html = html.replace("{{COOKIE_BANNER}}", cookie_banner_html)

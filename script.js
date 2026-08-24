@@ -81,6 +81,23 @@
   }
 
   // ---- contact form: graceful AJAX submit if endpoint is configured -------
+  // Status strings follow <html lang>, so the Croatian pages speak Croatian.
+  var I18N = {
+    en: {
+      notWired: "Form not connected yet - please use WhatsApp or email for now.",
+      sending: "Sending…",
+      ok: "Thank you - your request is on its way. Ivana will reply personally, usually within a few hours.",
+      err: "Something went wrong. Please reach out on WhatsApp or by email instead."
+    },
+    hr: {
+      notWired: "Obrazac još nije povezan - molimo javite se putem WhatsAppa ili e-pošte.",
+      sending: "Šaljem…",
+      ok: "Hvala - vaš upit je poslan. Ivana će vam osobno odgovoriti, obično unutar nekoliko sati.",
+      err: "Nešto je pošlo po zlu. Molimo javite se putem WhatsAppa ili e-pošte."
+    }
+  };
+  var T = I18N[(document.documentElement.lang || "en").slice(0, 2)] || I18N.en;
+
   var form = document.getElementById("tourForm");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -88,13 +105,13 @@
       // If the endpoint is still the placeholder, don't pretend it sent.
       if (action.indexOf("YOUR_FORM_ID") !== -1) {
         e.preventDefault();
-        showStatus("Form not connected yet - please use WhatsApp or email for now.", "warn");
+        showStatus(T.notWired, "warn");
         return;
       }
       e.preventDefault();
       var btn = form.querySelector('[type="submit"]');
       var original = btn ? btn.textContent : "";
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      if (btn) { btn.disabled = true; btn.textContent = T.sending; }
       fetch(action, {
         method: "POST",
         body: new FormData(form),
@@ -102,12 +119,12 @@
       }).then(function (r) {
         if (r.ok) {
           form.reset();
-          showStatus("Thank you - your request is on its way. Ivana will reply personally, usually within a few hours.", "ok");
+          showStatus(T.ok, "ok");
         } else {
-          showStatus("Something went wrong. Please reach out on WhatsApp or by email instead.", "warn");
+          showStatus(T.err, "warn");
         }
       }).catch(function () {
-        showStatus("Something went wrong. Please reach out on WhatsApp or by email instead.", "warn");
+        showStatus(T.err, "warn");
       }).finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = original; }
       });

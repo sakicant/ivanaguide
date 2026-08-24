@@ -1,0 +1,27 @@
+{
+  "slug": "ture/domovinski-rat",
+  "title": "Doživljaj Domovinskog rata u Šibeniku | Privatne ture s Ivanom",
+  "description": "Privatna pješačka tura Šibenika o Domovinskom ratu, ispričana kroz osobna sjećanja lokalne vodičice iz djetinjstva. 2–2.5 sata, 200€ po grupi.",
+  "keywords": "tura Domovinski rat Šibenik, rujanska bitka Šibenik, povijesna tura Šibenik",
+  "og_image": "https://deborah.hr/assets/img/sibenik-old-town-fortress-night-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Doživljaj Domovinskog rata u Šibeniku",
+      "description": "Privatna pješačka tura Šibenika o Domovinskom ratu, ispričana kroz osobna sjećanja lokalne vodičice iz djetinjstva. 2–2.5 sata, 200€ po grupi.",
+      "image": "https://deborah.hr/assets/img/sibenik-old-town-fortress-night-land.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Privatne ture s Ivanom"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "200",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://deborah.hr/hr/ture/domovinski-rat/"
+      }
+    }
+  ]
+}

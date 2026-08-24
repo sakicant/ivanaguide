@@ -1,0 +1,33 @@
+<a class="skip-link" href="#main">Prijeđi na sadržaj</a>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="/hr/" class="brand" aria-label="{{SITE_NAME}} - početna">
+      <img class="brand-mark" src="/assets/img/logo-mark.png" alt="" width="64" height="112">
+      <span class="brand-text">
+        <span class="brand-name">Deborah</span>
+        <span class="brand-sub">Privatne ture s Ivanom</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Glavna navigacija">
+        {{NAV}}
+    </nav>
+
+    <div class="header-actions">
+      {{LANG_SWITCHER}}
+      <a href="{{WHATSAPP_URL}}" class="btn btn-sm btn-solid" target="_blank" rel="noopener">Zatražite turu</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    {{NAV}}
+    <div class="mobile-lang-list">
+      {{LANG_SWITCHER_MOBILE}}
+    </div>
+    <a href="{{WHATSAPP_URL}}" class="btn btn-solid btn-block" target="_blank" rel="noopener">Zatražite turu</a>
+  </div>
+</header>

@@ -1,0 +1,112 @@
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:2.5rem">
+      <p class="eyebrow">Javite se</p>
+      <h1 style="font-size:clamp(2.4rem,5vw,3.6rem)">Zatražite privatnu turu</h1>
+      <p class="lead">Javite Ivani željeni datum, vrijeme, veličinu grupe i kakav doživljaj tražite. Osobno će vam odgovoriti unutar nekoliko sati i pomoći isplanirati savršenu turu. Za najbrži odgovor pošaljite poruku na WhatsApp.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- DIRECT METHODS -->
+      <div class="reveal">
+        <h2 class="contact-col-title">Kontaktirajte Ivanu izravno</h2>
+        <div class="contact-methods">
+          <a class="contact-method" href="{{WHATSAPP_URL}}" target="_blank" rel="noopener">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.3c-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.6-.1l.9-1c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg></span>
+            <span class="cm-text"><span class="lbl">WhatsApp - najbrže</span><span class="val">{{PHONE_DISPLAY}}</span></span>
+          </a>
+          <a class="contact-method" href="{{PHONE_URL}}">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L20 13l1 4v3a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1z"/></svg></span>
+            <span class="cm-text"><span class="lbl">Nazovite</span><span class="val">{{PHONE_DISPLAY}}</span></span>
+          </a>
+          <a class="contact-method" href="{{EMAIL_URL}}">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span class="cm-text"><span class="lbl">E-pošta</span><span class="val">{{EMAIL}}</span></span>
+          </a>
+        </div>
+
+        <h3 style="font-size:1.15rem;margin-top:2rem">Gdje počinju ture starim gradom</h3>
+        <p style="color:var(--muted)">Obala hrvatske mornarice 1, 22000 Šibenik (pokraj INA benzinske postaje). Ture se održavaju na hrvatskom i engleskom jeziku. Cijene su po grupi, do navedene veličine grupe.</p>
+        <p style="color:var(--muted);font-size:0.9rem">Ture ne uključuju prijevoz. Za vožnju do mjesta susreta, hotela ili zračne luke javite se Ivaninom prijatelju Antoniju u <a href="{{TAXI_ANTONIO_URL}}" target="_blank" rel="noopener">TAXI Antonio</a>, vrlo dobro ocijenjenu lokalnu taksi službu u Šibeniku.</p>
+        <div class="meet-media">
+          <img src="/assets/img/meeting-point-kiosk-guide-vert.webp" alt="Ivana na mjestu susreta za privatne ture u Šibeniku, pokraj INA benzinske postaje" loading="lazy" class="meet-photo">
+          <iframe class="map-embed" src="https://www.google.com/maps?q=Obala%20hrvatske%20mornarice%201%2C%20Šibenik&output=embed" title="Mjesto susreta za privatne pješačke ture u Šibeniku" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="reveal">
+        <h2 class="contact-col-title">Pošaljite upit za rezervaciju</h2>
+        <div class="form-card">
+          <form id="tourForm" action="{{FORM_ENDPOINT}}" method="POST">
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">Vaše ime</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-email">E-pošta</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-date">Željeni datum</label>
+                <input id="f-date" name="preferred_date" type="date">
+              </div>
+              <div class="field">
+                <label for="f-time">Željeno vrijeme</label>
+                <select id="f-time" name="preferred_time">
+                  <option value="">Odaberite vrijeme</option>
+                  <option>08:00</option>
+                  <option>08:30</option>
+                  <option>09:00</option>
+                  <option>09:30</option>
+                  <option>10:00</option>
+                  <option>10:30</option>
+                  <option>11:00</option>
+                  <option>11:30</option>
+                  <option>12:00</option>
+                  <option>12:30</option>
+                  <option>13:00</option>
+                  <option>13:30</option>
+                  <option>14:00</option>
+                  <option>14:30</option>
+                  <option>15:00</option>
+                  <option>15:30</option>
+                  <option>16:00</option>
+                  <option>16:30</option>
+                  <option>17:00</option>
+                  <option>17:30</option>
+                  <option>18:00</option>
+                  <option>18:30</option>
+                  <option>19:00</option>
+                  <option>19:30</option>
+                  <option>20:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-group">Veličina grupe</label>
+              <input id="f-group" name="group_size" type="number" min="1" max="10" placeholder="npr. 2">
+            </div>
+            <div class="field">
+              <label for="f-msg">Još nešto?</label>
+              <textarea id="f-msg" name="message" placeholder="Dob djece, interesi, raspored krstarenja, pitanja…"></textarea>
+            </div>
+            <div class="field field-checkbox">
+              <label class="checkbox-label">
+                <input type="checkbox" id="f-gdpr" name="gdpr_consent" required>
+                <span>Slažem se da se moji podaci koriste isključivo za odgovor na ovaj upit i za osnovnu anonimiziranu analitiku stranice - ništa drugo. Pročitajte <a href="/hr/politika-privatnosti/" target="_blank" rel="noopener">Politiku privatnosti</a>.</span>
+              </label>
+            </div>
+            <input type="hidden" name="_subject" value="Novi upit za turu - Privatne ture s Ivanom">
+            <button type="submit" class="btn btn-solid btn-block">Pošaljite upit</button>
+            <div id="formStatus" class="form-status" hidden></div>
+            <p class="form-note">Bez neželjene pošte, nikad.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
