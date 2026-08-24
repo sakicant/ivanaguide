@@ -516,7 +516,9 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .tour-hero-inner { width: min(var(--wrap), 92%); margin-inline: auto; padding: 0 0 clamp(2rem,5vw,3.5rem); max-width: 820px; }
 .tour-hero .eyebrow { color: #efd7ad; }
 .tour-hero h1 { color: #fff; font-size: clamp(2.2rem,5vw,3.6rem); text-shadow: 0 2px 24px rgba(0,0,0,.35); margin-bottom: 0.3rem; }
-.tour-hero-tagline { font-family: var(--serif); font-style: italic; font-size: clamp(1.2rem,2.2vw,1.6rem); color: #f3ece2; margin: 0; }
+/* Sans, not italic serif: this sits on a photo, where italics at size were hard
+   to read. Shadow lifts it off busy backgrounds; max-width keeps a sane measure. */
+.tour-hero-tagline { font-family: var(--sans); font-style: normal; font-weight: 400; font-size: clamp(1.02rem,1.7vw,1.24rem); line-height: 1.5; letter-spacing: 0.01em; color: #f3ece2; margin: 0.55rem 0 0; max-width: 46rem; text-shadow: 0 1px 14px rgba(0,0,0,.45); }
 
 /* --------------------------------------------------------------- tour detail layout */
 .tour-detail-layout { display: grid; grid-template-columns: 1.6fr 0.9fr; gap: clamp(2rem,5vw,4rem); align-items: start; }
