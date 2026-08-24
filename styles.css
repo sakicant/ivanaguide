@@ -406,8 +406,12 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .contact-method:hover { border-color: var(--gold); transform: translateX(3px); color: var(--ink-soft); }
 .contact-method .ico { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 50%; background: var(--gold-soft); color: var(--gold-dark); }
 .contact-method .ico svg { width: 20px; height: 20px; }
+/* Label above, number/address on its own row beneath it. */
+.contact-method .cm-text { display: flex; flex-direction: column; gap: 0.18rem; min-width: 0; }
 .contact-method .lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
-.contact-method .val { font-weight: 600; color: var(--ink); font-size: 1.02rem; }
+.contact-method .val { font-weight: 600; color: var(--ink); font-size: 1.02rem; overflow-wrap: anywhere; }
+/* Both column headings share one style so the two columns start level. */
+.contact-col-title { font-size: 1.6rem; text-align: center; margin-bottom: 1.2rem; }
 
 .form-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.4rem); box-shadow: var(--shadow-sm); }
 .field { margin-bottom: 1.2rem; }

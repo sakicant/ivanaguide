@@ -25,11 +25,11 @@ DEFAULT_LANG = "en"
 # English is live; Croatian and Russian are wired up (switcher, hreflang,
 # sitemap) but have no translated pages yet — they show as "Coming soon" in
 # the switcher until a src/pages/<page-id>/hr|ru/ folder actually exists.
-LANGUAGES = ["en", "hr", "ru"]
+LANGUAGES = ["en", "hr"]
 
 # Native-language label + short code, used by the language switcher.
-LANGUAGE_NAMES = {"en": "English", "hr": "Hrvatski", "ru": "Русский"}
-LANGUAGE_CODES = {"en": "EN", "hr": "HR", "ru": "RU"}
+LANGUAGE_NAMES = {"en": "English", "hr": "Hrvatski"}
+LANGUAGE_CODES = {"en": "EN", "hr": "HR"}
 
 # ---------------------------------------------------------------------------
 # CONFIG — the only place site-wide details live. Swap placeholders for the
@@ -75,9 +75,9 @@ SITE_URL = CONFIG["SITE_URL"]
 DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/img/sibenik-cathedral-st-james-square-sunset-land.webp"
 YEAR = str(datetime.date.today().year)
 
-HOME_LABEL = {"en": "Home", "hr": "Početna", "ru": "Главная"}
+HOME_LABEL = {"en": "Home", "hr": "Početna"}
 # Parent-section labels for nested slugs (e.g. tours/old-town -> "Tours"), per language.
-SECTION_LABELS = {"tours": {"en": "Tours", "hr": "Ture", "ru": "Туры"}}
+SECTION_LABELS = {"tours": {"en": "Tours", "hr": "Ture"}}
 
 
 def compute_asset_version():
