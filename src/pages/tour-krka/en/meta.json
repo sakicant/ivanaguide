@@ -3,14 +3,14 @@
   "title": "Krka National Park Private Walking Tour | Private Walking Tours by Ivana",
   "description": "Private guided walking tour of Krka National Park's Skradinski Buk waterfalls with a licensed local guide. Three route options, 2.5–3 hours, from €180 per group.",
   "keywords": "Krka private tour, Krka national park guide, Skradinski Buk guided tour, private guided Krka tour, Šibenik Krka guide, Krka waterfalls tour",
-  "og_image": "https://deborah.hr/assets/img/krka-ivana-viewpoint-land.webp",
+  "og_image": "https://deborah.hr/assets/img/krka-tour-hero-falls-land.webp",
   "schema": [
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Krka National Park Private Walking Tour - Skradinski Buk Experience",
       "description": "Private guided walking tour of Krka National Park's Skradinski Buk waterfalls with a licensed local guide. Three route options, 2.5–3 hours, from €180 per group. Transportation and entrance tickets not included.",
-      "image": "https://deborah.hr/assets/img/krka-ivana-viewpoint-land.webp",
+      "image": "https://deborah.hr/assets/img/krka-tour-hero-falls-land.webp",
       "brand": {
         "@type": "Brand",
         "name": "Private Walking Tours by Ivana"
