@@ -120,6 +120,9 @@ p, .lead, .hero-sub, .cta-text, .tour-tagline, .footer-tagline {
 .ornament { display: flex; align-items: center; justify-content: center; gap: 0.9rem; color: var(--gold); margin: 0 0 1.4rem; }
 .ornament::before, .ornament::after { content: ""; width: 44px; height: 1px; background: currentColor; opacity: 0.5; }
 .ornament span { font-size: 0.8rem; letter-spacing: 0.2em; }
+/* Mirrors the ornament above a quote; the blockquote's own 1.2rem bottom margin
+   plus this 0.2rem matches the 1.4rem gap above, so the pair reads symmetrical. */
+.ornament-below { margin: 0.2rem 0 0; }
 
 /* --------------------------------------------------------------- buttons */
 .btn {
@@ -308,7 +311,14 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .tour-card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.1rem; border-top: 1px solid var(--line-soft); }
 .tour-loc { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--muted); }
 .tour-loc svg { width: 15px; height: 15px; color: var(--gold-dark); flex: none; }
-.tour-price-tag { font-family: var(--sans); font-weight: 700; color: var(--ink); font-size: 1.02rem; white-space: nowrap; }
+/* Prices share one treatment: sans with lining, tabular figures so digits line up
+   and read cleanly at any size (Playfair's numerals were muddy on the big price). */
+.tour-price-tag, .booking-card .price, .tour-option-price {
+  font-family: var(--sans);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+.tour-price-tag { font-weight: 700; color: var(--ink); font-size: 1.02rem; white-space: nowrap; letter-spacing: -0.01em; }
 .tour-price-tag .per { font-weight: 400; color: var(--muted); font-size: 0.78rem; }
 .tour-price-tag.soon { font-weight: 600; color: var(--gold-dark); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
@@ -528,7 +538,7 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .back-link:hover { color: var(--ink); }
 
 .booking-card { position: sticky; top: 100px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow-sm); }
-.booking-card .price { font-family: var(--serif); font-size: 2.4rem; color: var(--gold-dark); line-height: 1; margin-bottom: 0.2rem; }
+.booking-card .price { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--gold-dark); line-height: 1.05; margin-bottom: 0.2rem; }
 .booking-card .price span { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); }
 .booking-card .price-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.3rem; }
 .booking-card dl { display: grid; gap: 0.75rem; margin: 0 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }

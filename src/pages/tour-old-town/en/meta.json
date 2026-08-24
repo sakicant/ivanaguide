@@ -1,7 +1,7 @@
 {
   "slug": "tours/old-town",
   "title": "Private Šibenik Old Town Walking Tour | Private Walking Tours by Ivana",
-  "description": "Private walking tour of Šibenik Old Town with a licensed local guide. Medieval streets, the UNESCO Cathedral of St. James, and hidden corners. 1.5–2 hours, €150 per group.",
+  "description": "Private walking tour of Šibenik Old Town with a licensed local guide. Medieval streets, the UNESCO Cathedral of St. James, and hidden corners. 1.5–2 hours, 150€ per group.",
   "keywords": "Šibenik old town walking tour, private walking tour Šibenik, Šibenik cathedral tour, licensed guide Šibenik",
   "og_image": "https://deborah.hr/assets/img/oldtown-tour-hero-inscription-land.webp",
   "schema": [
@@ -9,7 +9,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Old Town Private Walking Tour in Šibenik",
-      "description": "Private walking tour of Šibenik Old Town with a licensed local guide. Medieval streets, the UNESCO Cathedral of St. James, and hidden corners. 1.5–2 hours, €150 per group.",
+      "description": "Private walking tour of Šibenik Old Town with a licensed local guide. Medieval streets, the UNESCO Cathedral of St. James, and hidden corners. 1.5–2 hours, 150€ per group.",
       "image": "https://deborah.hr/assets/img/oldtown-tour-hero-inscription-land.webp",
       "brand": {
         "@type": "Brand",
