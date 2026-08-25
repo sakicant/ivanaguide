@@ -634,6 +634,12 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .about-story-section.pt-tight { padding-top: 2rem; }
   /* Mobile only: center the hero trust badge (left-aligned on desktop). */
   .hero-trust { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
+  /* Mobile only: centre the hero headline and its two CTAs, and soften the
+     solid CTA so the photo reads through it a little. */
+  .hero h1 { text-align: center; }
+  .hero-actions { justify-content: center; }
+  .hero-actions .btn-solid { background: rgba(181, 138, 74, 0.78); border-color: rgba(181, 138, 74, 0.55); backdrop-filter: blur(2px); }
+  .hero-actions .btn-solid:hover { background: rgba(138, 102, 49, 0.88); border-color: rgba(138, 102, 49, 0.7); }
   /* Mobile only: fixed 2-column gallery reads cleaner than auto-fill on narrow screens. */
   .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   /* Mobile only: side-by-side landscapes get too small, so stack them (portrait pairs stay side by side). */
