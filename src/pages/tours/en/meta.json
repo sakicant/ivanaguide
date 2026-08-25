@@ -10,12 +10,48 @@
       "@type": "ItemList",
       "name": "Private walking tours of Šibenik",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Šibenik Old Town Private Walking Tour", "url": "https://deborah.hr/tours/old-town/" },
-        { "@type": "ListItem", "position": 2, "name": "Šibenik Family Private Walking Tour", "url": "https://deborah.hr/tours/family/" },
-        { "@type": "ListItem", "position": 3, "name": "Šibenik History & Coffee with a Local Guide", "url": "https://deborah.hr/tours/history-coffee/" },
-        { "@type": "ListItem", "position": 4, "name": "Šibenik Homeland War Experience", "url": "https://deborah.hr/tours/homeland-war/" },
-        { "@type": "ListItem", "position": 5, "name": "Šibenik History & Homeland War Private Walking Tour", "url": "https://deborah.hr/tours/history-homeland-war/" },
-        { "@type": "ListItem", "position": 6, "name": "Private Guided Krka National Park Tour", "url": "https://deborah.hr/tours/krka/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Šibenik Old Town Private Walking Tour",
+          "url": "https://deborah.hr/tours/old-town/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Šibenik Family Private Walking Tour",
+          "url": "https://deborah.hr/tours/family/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Šibenik History & Coffee with a Local Guide",
+          "url": "https://deborah.hr/tours/history-coffee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Šibenik Homeland War Experience",
+          "url": "https://deborah.hr/tours/homeland-war/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Šibenik History & Homeland War Private Walking Tour",
+          "url": "https://deborah.hr/tours/history-homeland-war/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Private Guided Krka National Park Tour",
+          "url": "https://deborah.hr/tours/krka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Private Zlarin Island Half-Day Experience",
+          "url": "https://deborah.hr/tours/zlarin/"
+        }
       ]
     }
   ]

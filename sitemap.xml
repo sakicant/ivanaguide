@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://deborah.hr/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/about/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/about/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/contact/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/contact/"/>
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/"/>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/kontakt/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/contact/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/o-meni/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/about/"/>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/"/>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/domovinski-rat/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/homeland-war/"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/krka/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/krka/"/>
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/obiteljska-tura/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/family/"/>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/povijest-i-domovinski-rat/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/history-homeland-war/"/>
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/povijest-i-kava/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/history-coffee/"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/hr/ture/stari-grad/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/old-town/"/>
@@ -118,8 +118,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://deborah.hr/tours/old-town/"/>
   </url>
   <url>
+    <loc>https://deborah.hr/hr/ture/zlarin/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/zlarin/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://deborah.hr/hr/ture/zlarin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deborah.hr/tours/zlarin/"/>
+  </url>
+  <url>
     <loc>https://deborah.hr/tours/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/"/>
@@ -128,7 +137,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/family/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/family/"/>
@@ -137,7 +146,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/history-coffee/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/history-coffee/"/>
@@ -146,7 +155,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/history-homeland-war/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/history-homeland-war/"/>
@@ -155,7 +164,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/homeland-war/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/homeland-war/"/>
@@ -164,7 +173,7 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/krka/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/krka/"/>
@@ -173,11 +182,20 @@
   </url>
   <url>
     <loc>https://deborah.hr/tours/old-town/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/old-town/"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://deborah.hr/hr/ture/stari-grad/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://deborah.hr/tours/old-town/"/>
+  </url>
+  <url>
+    <loc>https://deborah.hr/tours/zlarin/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deborah.hr/tours/zlarin/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://deborah.hr/hr/ture/zlarin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deborah.hr/tours/zlarin/"/>
   </url>
 </urlset>

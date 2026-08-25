@@ -10,12 +10,48 @@
       "@type": "ItemList",
       "name": "Privatne pješačke ture Šibenika",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Privatna tura šibenskog starog grada", "url": "https://deborah.hr/hr/ture/stari-grad/" },
-        { "@type": "ListItem", "position": 2, "name": "Obiteljska privatna tura Šibenika", "url": "https://deborah.hr/hr/ture/obiteljska-tura/" },
-        { "@type": "ListItem", "position": 3, "name": "Povijest i kava s lokalnom vodičicom", "url": "https://deborah.hr/hr/ture/povijest-i-kava/" },
-        { "@type": "ListItem", "position": 4, "name": "Doživljaj Domovinskog rata u Šibeniku", "url": "https://deborah.hr/hr/ture/domovinski-rat/" },
-        { "@type": "ListItem", "position": 5, "name": "Povijest i Domovinski rat - privatna tura", "url": "https://deborah.hr/hr/ture/povijest-i-domovinski-rat/" },
-        { "@type": "ListItem", "position": 6, "name": "Privatna tura Nacionalnog parka Krka", "url": "https://deborah.hr/hr/ture/krka/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Privatna tura šibenskog starog grada",
+          "url": "https://deborah.hr/hr/ture/stari-grad/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Obiteljska privatna tura Šibenika",
+          "url": "https://deborah.hr/hr/ture/obiteljska-tura/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Povijest i kava s lokalnom vodičicom",
+          "url": "https://deborah.hr/hr/ture/povijest-i-kava/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Doživljaj Domovinskog rata u Šibeniku",
+          "url": "https://deborah.hr/hr/ture/domovinski-rat/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Povijest i Domovinski rat - privatna tura",
+          "url": "https://deborah.hr/hr/ture/povijest-i-domovinski-rat/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Privatna tura Nacionalnog parka Krka",
+          "url": "https://deborah.hr/hr/ture/krka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Privatni poludnevni doživljaj otoka Zlarina",
+          "url": "https://deborah.hr/hr/ture/zlarin/"
+        }
       ]
     }
   ]

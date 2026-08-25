@@ -75,7 +75,7 @@ SITE_URL = CONFIG["SITE_URL"]
 DEFAULT_OG_IMAGE = f"{SITE_URL}/assets/img/sibenik-cathedral-st-james-square-sunset-land.webp"
 YEAR = str(datetime.date.today().year)
 
-HOME_LABEL = {"en": "Home", "hr": "Početna"}
+HOME_LABEL = {"en": "Home", "hr": "Naslovna"}
 # Parent-section labels for nested slugs, keyed by the parent slug as it appears
 # in that language's URL (tours/old-town -> "Tours", ture/stari-grad -> "Ture").
 SECTION_LABELS = {
@@ -87,7 +87,7 @@ SECTION_LABELS = {
 # slug values in each language's meta.json or the links would 404.
 NAV_ITEMS = {
     "en": [("", "Home"), ("tours", "Tours"), ("about", "About"), ("contact", "Contact")],
-    "hr": [("", "Početna"), ("ture", "Ture"), ("o-meni", "O meni"), ("kontakt", "Kontakt")],
+    "hr": [("", "Naslovna"), ("ture", "Ture"), ("o-meni", "O meni"), ("kontakt", "Kontakt")],
 }
 
 # Small UI strings the build injects rather than reading from a partial.

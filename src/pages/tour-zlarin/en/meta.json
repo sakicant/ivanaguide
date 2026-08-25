@@ -1,0 +1,24 @@
+{
+  "slug": "tours/zlarin",
+  "title": "Private Zlarin Island Half-Day Experience | Private Walking Tours by Ivana",
+  "description": "Half-day private trip to Zlarin island with a licensed local guide. Travel by the regular public boat from Šibenik, walk the village, hear its coral-diving stories, and swim. 250€ per group, up to 6.",
+  "keywords": "Zlarin island tour, Šibenik to Zlarin boat, private island tour Šibenik, Zlarin coral, Šibenik archipelago tour",
+  "og_image": "https://deborah.hr/assets/img/zlarin-tour-hero-boat-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Private Zlarin Island Half-Day Experience",
+      "description": "Half-day private guided trip from Šibenik to Zlarin island, travelling by the regular public boat line. Village walk, coral heritage stories, and free time to swim. 250€ per group, up to 6 guests.",
+      "image": "https://deborah.hr/assets/img/zlarin-tour-hero-boat-land.webp",
+      "brand": { "@type": "Brand", "name": "Private Walking Tours by Ivana" },
+      "offers": {
+        "@type": "Offer",
+        "price": "250",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://deborah.hr/tours/zlarin/"
+      }
+    }
+  ]
+}

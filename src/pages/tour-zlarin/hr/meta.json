@@ -1,0 +1,24 @@
+{
+  "slug": "ture/zlarin",
+  "title": "Privatni poludnevni izlet na Zlarin | Privatne ture s Ivanom",
+  "description": "Poludnevni privatni izlet na otok Zlarin s licenciranom lokalnom vodičicom. Putovanje redovnom brodskom linijom iz Šibenika, šetnja mjestom, priče o koraljarstvu i vrijeme za kupanje. 250€ po grupi, do 6 gostiju.",
+  "keywords": "izlet Zlarin, Šibenik Zlarin brod, privatni izlet na otok Šibenik, zlarinski koralj, ture šibenski arhipelag",
+  "og_image": "https://deborah.hr/assets/img/zlarin-tour-hero-boat-land.webp",
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Privatni poludnevni doživljaj otoka Zlarina",
+      "description": "Poludnevni privatni vođeni izlet iz Šibenika na otok Zlarin redovnom brodskom linijom. Šetnja mjestom, priče o koraljarskoj baštini i slobodno vrijeme za kupanje. 250€ po grupi, do 6 gostiju.",
+      "image": "https://deborah.hr/assets/img/zlarin-tour-hero-boat-land.webp",
+      "brand": { "@type": "Brand", "name": "Privatne ture s Ivanom" },
+      "offers": {
+        "@type": "Offer",
+        "price": "250",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://deborah.hr/hr/ture/zlarin/"
+      }
+    }
+  ]
+}
