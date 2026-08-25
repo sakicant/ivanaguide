@@ -642,6 +642,8 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .hero-actions { justify-content: center; }
   .hero-actions .btn-solid { background: rgba(181, 138, 74, 0.78); border-color: rgba(181, 138, 74, 0.55); backdrop-filter: blur(2px); }
   .hero-actions .btn-solid:hover { background: rgba(138, 102, 49, 0.88); border-color: rgba(138, 102, 49, 0.7); }
+  /* Mobile only: centre the CTA pair on the tour pages (left-aligned on desktop). */
+  .tour-cta-row { justify-content: center; }
   /* Mobile only: fixed 2-column gallery reads cleaner than auto-fill on narrow screens. */
   .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   /* Mobile only: side-by-side landscapes get too small, so stack them (portrait pairs stay side by side). */
