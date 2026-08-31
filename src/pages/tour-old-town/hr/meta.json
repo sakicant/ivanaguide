@@ -1,6 +1,6 @@
 {
   "slug": "ture/stari-grad",
-  "title": "Privatna tura šibenskog starog grada | Privatne ture s Ivanom",
+  "title": "Šibenik - privatna tura starom gradskom jezgrom | Privatne ture s Ivanom",
   "description": "Privatna pješačka tura šibenskog starog grada s licenciranim lokalnim vodičem. Srednjovjekovne ulice, katedrala sv. Jakova pod zaštitom UNESCO-a i skriveni kutci. 1.5–2 sata, 150€ po grupi.",
   "keywords": "razgled starog grada Šibenik, privatna pješačka tura Šibenik, tura katedrala Šibenik, licencirani vodič Šibenik",
   "og_image": "https://deborah.hr/assets/img/oldtown-tour-hero-inscription-land.webp",
@@ -8,7 +8,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Privatna tura šibenskog starog grada",
+      "name": "Šibenik - privatna tura starom gradskom jezgrom",
       "description": "Privatna pješačka tura šibenskog starog grada s licenciranim lokalnim vodičem. Srednjovjekovne ulice, katedrala sv. Jakova pod zaštitom UNESCO-a i skriveni kutci. 1.5–2 sata, 150€ po grupi.",
       "image": "https://deborah.hr/assets/img/oldtown-tour-hero-inscription-land.webp",
       "brand": {
