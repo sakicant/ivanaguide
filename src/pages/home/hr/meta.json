@@ -1,8 +1,8 @@
 {
   "slug": "",
-  "title": "Privatne ture Šibenika | Licencirana lokalna vodičica Ivana",
-  "description": "Privatne pješačke ture šibenskog starog grada koje vodi Ivana, licencirana lokalna vodičica rođena i odrasla u gradu. Povijest, skriveni kutci i osobne priče - izvan turističkih vodiča.",
-  "keywords": "razgled Šibenika, privatna tura Šibenik, turistički vodič Šibenik, tura stari grad Šibenik, licencirana vodičica Šibenik, privatni vodič Šibenik",
+  "title": "Privatne ture Šibenika | Licencirani lokalni vodič Ivana",
+  "description": "Privatne pješačke ture šibenskog starog grada koje vodi Ivana, licencirani lokalni vodič, rođena i odrasla u gradu. Povijest, skriveni kutci i osobne priče - izvan turističkih vodiča.",
+  "keywords": "razgled Šibenika, privatna tura Šibenik, turistički vodič Šibenik, tura stari grad Šibenik, licencirani vodič Šibenik, privatni vodič Šibenik",
   "og_image": "https://deborah.hr/assets/img/ivana-family-tour-cathedral-st-james-land.webp",
   "schema": [
     {
@@ -11,7 +11,7 @@
       "@id": "https://deborah.hr/#business",
       "name": "Privatne ture s Ivanom",
       "legalName": "{{LEGAL_NAME}}",
-      "description": "Privatne pješačke ture Šibenika koje vodi licencirana lokalna vodičica certificirana pri Ministarstvu turizma Republike Hrvatske.",
+      "description": "Privatne pješačke ture Šibenika koje vodi licencirani lokalni vodič, certificirana pri Ministarstvu turizma Republike Hrvatske.",
       "url": "https://deborah.hr/hr/",
       "telephone": "+385955278924",
       "email": "ivana@deborah.hr",
@@ -31,7 +31,7 @@
       "founder": {
         "@type": "Person",
         "name": "{{OWNER_NAME}}",
-        "jobTitle": "Licencirana turistička vodičica",
+        "jobTitle": "Licencirani turistički vodič",
         "knowsLanguage": [
           "hr",
           "en"

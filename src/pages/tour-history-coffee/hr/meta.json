@@ -1,15 +1,15 @@
 {
   "slug": "ture/povijest-i-kava",
-  "title": "Povijest i kava s lokalnom vodičicom | Privatne ture s Ivanom",
-  "description": "Privatna tura Šibenika uz opuštenu kavu s lokalnom vodičicom. Povijest, skriveni kutci i autentične lokalne preporuke. Oko 3 sata, 180€ po grupi.",
+  "title": "Povijest i kava s lokalnim vodičem | Privatne ture s Ivanom",
+  "description": "Privatna tura Šibenika uz opuštenu kavu s lokalnim vodičem. Povijest, skriveni kutci i autentične lokalne preporuke. Oko 3 sata, 180€ po grupi.",
   "keywords": "tura povijest i kava Šibenik, privatna tura Šibenik kava, lokalne preporuke Šibenik",
   "og_image": "https://deborah.hr/assets/img/sibenik-old-town-promenade-sunset-land.webp",
   "schema": [
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Povijest i kava s lokalnom vodičicom u Šibeniku",
-      "description": "Privatna tura Šibenika uz opuštenu kavu s lokalnom vodičicom. Povijest, skriveni kutci i autentične lokalne preporuke. Oko 3 sata, 180€ po grupi.",
+      "name": "Povijest i kava s lokalnim vodičem u Šibeniku",
+      "description": "Privatna tura Šibenika uz opuštenu kavu s lokalnim vodičem. Povijest, skriveni kutci i autentične lokalne preporuke. Oko 3 sata, 180€ po grupi.",
       "image": "https://deborah.hr/assets/img/sibenik-old-town-promenade-sunset-land.webp",
       "brand": {
         "@type": "Brand",
