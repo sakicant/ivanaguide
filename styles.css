@@ -62,6 +62,9 @@ h1, h2, h3, h4 {
   letter-spacing: 0.2px;
 }
 h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-family: var(--sans); font-weight: 700; letter-spacing: -0.015em; }
+/* A hard line break that only applies on phones; hidden on wider screens,
+   where the space left before it keeps the heading on one line. */
+.mobile-break { display: none; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
 h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); }
 p  { margin: 0 0 1.1em; }
@@ -636,6 +639,7 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
   .about-story-section.pt-tight { padding-top: 2rem; }
   /* Mobile only: center the hero trust badge (left-aligned on desktop). */
   .hero-trust { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
+  .mobile-break { display: inline; }
   /* Mobile only: centre the hero headline and its two CTAs, and soften the
      solid CTA so the photo reads through it a little. */
   .hero h1 { text-align: center; }
