@@ -76,10 +76,11 @@ DirectoryIndex index.html
 
 # -----------------------------------------------------------------------------
 # Security headers.
-# The CSP lists exactly what this site loads: Google Fonts for the typefaces,
-# and nothing else off-domain - the contact form posts to our own
-# contact-submit.php. If you add anything - analytics, a reviews widget, a map
-# embed - it will be blocked until you add its domain here.
+# The CSP lists exactly what this site loads off-domain: Google Fonts for the
+# typefaces and the Google Maps embed on the contact page. The contact form
+# posts to our own contact-submit.php, so nothing else is needed. Anything you
+# add later - analytics, a reviews widget, another embed - is blocked until its
+# domain is listed here, and a blocked frame shows as "This content is blocked".
 # -----------------------------------------------------------------------------
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
@@ -88,7 +89,7 @@ DirectoryIndex index.html
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   # Only sent over HTTPS, so it activates by itself once SSL is live.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
 </IfModule>
 
 # -----------------------------------------------------------------------------
