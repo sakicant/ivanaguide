@@ -363,11 +363,25 @@ def write_sitemap(pages):
     print(f"built sitemap.xml ({len(entries)} URLs)")
 
 
+# AI crawlers are allowed on purpose: this site wants to be quotable by
+# assistants, and llms.txt is written for exactly that. Naming them one by one
+# is a clearer signal than leaving them to the catch-all rule.
+AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot",
+               "Claude-User", "Claude-SearchBot", "PerplexityBot",
+               "Perplexity-User", "Google-Extended", "Applebot-Extended",
+               "meta-externalagent", "CCBot"]
+
+
 def write_robots():
-    txt = ("User-agent: *\n"
-           "Allow: /\n\n"
-           f"Sitemap: {SITE_URL}/sitemap.xml\n")
-    write(os.path.join(ROOT, "robots.txt"), txt)
+    lines = ["User-agent: *", "Allow: /", ""]
+    for bot in AI_CRAWLERS:
+        lines += [f"User-agent: {bot}", "Allow: /", ""]
+    lines += [f"Sitemap: {SITE_URL}/sitemap.xml",
+              "",
+              "# Plain-language summary of this site, written for language models:",
+              f"# {SITE_URL}/llms.txt",
+              ""]
+    write(os.path.join(ROOT, "robots.txt"), "\n".join(lines))
     print("built robots.txt")
 
 

@@ -1,0 +1,45 @@
+# Deborah - Private Tours by Ivana (deborah.hr)
+
+> Private walking tours of Šibenik, Croatia, led personally by Ivana Kučić, a licensed local guide born and raised in the city. Seven tours: the old town, a family tour, history and coffee, two Homeland War tours, Krka National Park and Zlarin island. Prices are per group (up to 10 people), not per person. Booking is by direct message, not through an online checkout. Phone/WhatsApp: +385 95 527 8924. Email: ivana@deborah.hr.
+
+## Key facts
+
+- One guide, in person: every tour is led by Ivana Kučić herself, never subcontracted. She is a licensed tour guide, born and raised in Šibenik, and a former teacher.
+- Tours are private. You are never grouped with strangers.
+- Prices are fixed per group, not per person, for up to 10 people.
+- Tours run in Croatian and English.
+- Default meeting point: Obala hrvatske mornarice 1, 22000 Šibenik, next to the INA petrol station.
+- Entrance tickets (St James' Cathedral, Krka National Park), transport to the meeting point and food and drink are not included unless a tour page says otherwise.
+- There is no online booking or payment. Guests send a request by WhatsApp, email or the contact form, and Ivana confirms the date directly.
+- Registered as DEBORAH, obrt za usluge, vl. Ivana Kučić, Istarska 82, Šibenik, Croatia.
+
+## Languages
+
+The site is published in English and Croatian. English is served at the root; Croatian lives under /hr/ with its own slugs (/hr/ture/, /hr/o-meni/, /hr/kontakt/). Every page links to its counterpart via hreflang.
+
+## Main pages
+
+- [Home](https://deborah.hr/): Private guide in Šibenik, all tours at a glance.
+- [Tours](https://deborah.hr/tours/): All seven tours with prices and durations.
+- [About Ivana](https://deborah.hr/about/): Who she is, how she guides and why the tours are personal.
+- [Contact](https://deborah.hr/contact/): WhatsApp, phone, email and a request form.
+
+Croatian: [Naslovna](https://deborah.hr/hr/), [Ture](https://deborah.hr/hr/ture/), [O meni](https://deborah.hr/hr/o-meni/), [Kontakt](https://deborah.hr/hr/kontakt/).
+
+## Tours
+
+- [Šibenik Old Town Walking Tour](https://deborah.hr/tours/old-town/) - 150€ per group, 1.5-2 hours. The historic core, St James' Cathedral, stone streets and squares, told through local stories. Wheelchair and stroller friendly. Croatian: https://deborah.hr/hr/ture/stari-grad/
+- [Family Walking Tour](https://deborah.hr/tours/family/) - 160€ per group, 1.5-2 hours. The same old town at a child's pace, with a treasure hunt, legends and stops built around younger guests. Croatian: https://deborah.hr/hr/ture/obiteljska-tura/
+- [History & Coffee](https://deborah.hr/tours/history-coffee/) - 180€ per group, about 3 hours. A walk through the old town that pauses for coffee the way locals take it, mixing history with everyday life. Croatian: https://deborah.hr/hr/ture/povijest-i-kava/
+- [Šibenik Homeland War Experience](https://deborah.hr/tours/homeland-war/) - 200€ per group, 2-2.5 hours. The 1991-1995 war told through personal memory, including the September 1991 battle for Šibenik, by a guide who lived it as a child. Croatian: https://deborah.hr/hr/ture/domovinski-rat/
+- [History & Homeland War](https://deborah.hr/tours/history-homeland-war/) - 240€ per group, 2.5-3 hours. The combined tour: the city's landmarks and medieval past, plus the Homeland War chapter. Croatian: https://deborah.hr/hr/ture/povijest-i-domovinski-rat/
+- [Krka National Park](https://deborah.hr/tours/krka/) - 180-220€ per group, 2.5-3 hours. A private guided walk around Skradinski Buk. Three options depending on which entrance you use: in and out at Lozovac (180€), in and out at Skradin by boat (220€), or in at Lozovac and out at Skradin (200€). Park tickets and transport to the park are not included. Croatian: https://deborah.hr/hr/ture/krka/
+- [Zlarin Island Half-Day](https://deborah.hr/tours/zlarin/) - 250€ per group, half a day. The car-free island opposite Šibenik: the village, its coral-diving heritage and the coast, at island pace. Croatian: https://deborah.hr/hr/ture/zlarin/
+
+## Who the tours suit
+
+Couples, solo travellers, families with children, cruise passengers with a few hours ashore, and small groups who want a private guide rather than a flag-following crowd. Tours are flexible in pace and can be shaped around your interests, mobility and the time you have.
+
+## Contact
+
+WhatsApp and phone: +385 95 527 8924. Email: ivana@deborah.hr. Requests are answered directly by Ivana, usually the same day.

@@ -1,0 +1,104 @@
+# =============================================================================
+# deborah.hr - Apache configuration
+# Upload to the domain root (public_html), next to index.html.
+# Every block is wrapped in <IfModule>, so nothing breaks if a module is off.
+# =============================================================================
+
+# Don't let visitors browse folder contents.
+Options -Indexes
+
+# The site is built as folders with an index.html inside, so /tours/krka/
+# already resolves on its own. This just makes it explicit.
+DirectoryIndex index.html
+
+# -----------------------------------------------------------------------------
+# Canonical URLs: always https, always without www.
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS. The second condition avoids a redirect loop on hosts that
+  # terminate SSL upstream (Cloudflare, a load balancer) and pass plain HTTP on.
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # www.deborah.hr -> deborah.hr (canonical tags and the sitemap both use the
+  # bare domain, so the two must agree).
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Compression.
+# -----------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Caching. CSS and JS are requested with a ?v=hash that changes whenever the
+# file changes, so a long cache is safe: a new build busts it automatically.
+# HTML revalidates hourly so text edits appear quickly.
+# -----------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp             "access plus 1 year"
+  ExpiresByType image/jpeg             "access plus 1 year"
+  ExpiresByType image/png              "access plus 1 year"
+  ExpiresByType image/svg+xml          "access plus 1 year"
+  ExpiresByType text/css               "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/html              "access plus 1 hour"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|gif|svg|ico|css|js|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+  # These three change on every publish - never let them go stale.
+  <FilesMatch "^(sitemap\.xml|robots\.txt|llms\.txt)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Older Apache installs don't know these types; without them the browser
+# downloads the file instead of showing it.
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType text/plain .txt
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Security headers.
+# The CSP lists exactly what this site loads: Google Fonts for the typefaces
+# and Formspree for the contact form. If you add anything else - analytics, a
+# reviews widget, a map embed - it will be blocked until you add its domain here.
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # Only sent over HTTPS, so it activates by itself once SSL is live.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Keep the source files unreachable if they ever get uploaded by accident.
+# -----------------------------------------------------------------------------
+<FilesMatch "^(build\.py|.*\.json|.*\.md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
