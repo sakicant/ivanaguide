@@ -452,6 +452,16 @@ a.nav-lang-item:hover { background: var(--bg-alt); color: var(--ink); }
 .checkbox-label a { color: var(--gold-dark); }
 .checkbox-label a:hover { color: var(--ink); }
 
+/* Honeypot. Moved off-screen rather than display:none, because some bots skip
+   fields that are outright hidden. Screen readers skip it via aria-hidden. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
 .form-status { margin-top: 1rem; padding: 0.8rem 1rem; border-radius: var(--radius); font-size: 0.92rem; }
 .form-status.ok { background: #e7f0e8; color: #2f5d3a; border: 1px solid #bcd6c1; }

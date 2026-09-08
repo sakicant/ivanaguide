@@ -101,7 +101,12 @@
                 <span>I agree that my details will be used only to respond to this enquiry and for basic, anonymised website analytics - nothing else. Read the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span>
               </label>
             </div>
-            <input type="hidden" name="_subject" value="New tour request - Private Walking Tours by Ivana">
+            <input type="hidden" name="lang" value="en">
+            <!-- Honeypot: hidden from people, filled in by spam bots. -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <button type="submit" class="btn btn-solid btn-block">Send request</button>
             <div id="formStatus" class="form-status" hidden></div>
             <p class="form-note">No spam, ever.</p>

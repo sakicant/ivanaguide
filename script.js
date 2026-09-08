@@ -84,13 +84,11 @@
   // Status strings follow <html lang>, so the Croatian pages speak Croatian.
   var I18N = {
     en: {
-      notWired: "Form not connected yet - please use WhatsApp or email for now.",
       sending: "Sending…",
       ok: "Thank you - your request is on its way. Ivana will reply personally, usually within a few hours.",
       err: "Something went wrong. Please reach out on WhatsApp or by email instead."
     },
     hr: {
-      notWired: "Obrazac još nije povezan - molimo javite se putem WhatsAppa ili e-pošte.",
       sending: "Šaljem…",
       ok: "Hvala - vaš upit je poslan. Ivana će vam osobno odgovoriti, obično unutar nekoliko sati.",
       err: "Nešto je pošlo po zlu. Molimo javite se putem WhatsAppa ili e-pošte."
@@ -101,14 +99,8 @@
   var form = document.getElementById("tourForm");
   if (form) {
     form.addEventListener("submit", function (e) {
-      var action = form.getAttribute("action") || "";
-      // If the endpoint is still the placeholder, don't pretend it sent.
-      if (action.indexOf("YOUR_FORM_ID") !== -1) {
-        e.preventDefault();
-        showStatus(T.notWired, "warn");
-        return;
-      }
       e.preventDefault();
+      var action = form.getAttribute("action") || "";
       var btn = form.querySelector('[type="submit"]');
       var original = btn ? btn.textContent : "";
       if (btn) { btn.disabled = true; btn.textContent = T.sending; }
@@ -117,12 +109,17 @@
         body: new FormData(form),
         headers: { Accept: "application/json" }
       }).then(function (r) {
-        if (r.ok) {
-          form.reset();
-          showStatus(T.ok, "ok");
-        } else {
-          showStatus(T.err, "warn");
-        }
+        // contact-submit.php always answers with JSON. On a rejection it
+        // explains why (rate limit, invalid field), so show its message
+        // rather than the generic one.
+        return r.json().catch(function () { return {}; }).then(function (data) {
+          if (r.ok && data.success) {
+            form.reset();
+            showStatus(T.ok, "ok");
+          } else {
+            showStatus(data.error || T.err, "warn");
+          }
+        });
       }).catch(function () {
         showStatus(T.err, "warn");
       }).finally(function () {

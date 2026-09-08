@@ -101,7 +101,12 @@
                 <span>Slažem se da se moji podaci koriste isključivo za odgovor na ovaj upit i za osnovnu anonimiziranu analitiku stranice - ništa drugo. Pročitajte <a href="/hr/politika-privatnosti/" target="_blank" rel="noopener">Politiku privatnosti</a>.</span>
               </label>
             </div>
-            <input type="hidden" name="_subject" value="Novi upit za turu - Privatne ture s Ivanom">
+            <input type="hidden" name="lang" value="hr">
+            <!-- Honeypot: ljudima nevidljivo polje koje spam botovi ispune. -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-company">Tvrtka</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <button type="submit" class="btn btn-solid btn-block">Pošaljite upit</button>
             <div id="formStatus" class="form-status" hidden></div>
             <p class="form-note">Bez neželjene pošte, nikad.</p>

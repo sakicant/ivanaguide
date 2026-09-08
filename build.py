@@ -63,9 +63,10 @@ CONFIG = {
     "TAXI_ANTONIO_URL": "https://taxisibenik.hr",
     "ANTONIODIGITAL_URL": "https://antoniodigital.com",
 
-    # PLACEHOLDER — create a free form endpoint (e.g. Formspree) and paste the
-    # action URL here. Until then the form posts nowhere.
-    "FORM_ENDPOINT": "https://formspree.io/f/YOUR_FORM_ID",
+    # The contact form posts to our own PHP handler (contact-submit.php in the
+    # site root), which emails Ivana and acknowledges the guest. Needs PHP with
+    # mail() on the host — it does nothing on Vercel.
+    "FORM_ENDPOINT": "/contact-submit.php",
 
     "MEETING_POINT": "Obala hrvatske mornarice 1, 22000 Šibenik (next to the INA gas station)",
     "MEETING_MAP": "https://maps.google.com/?q=Obala+hrvatske+mornarice+1+Šibenik",
