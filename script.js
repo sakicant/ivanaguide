@@ -147,26 +147,10 @@
     }, 3000);
   }
 
-  // ---- cookie consent bar --------------------------------------------------
-  var cookieBar = document.getElementById("cookieBar");
-  if (cookieBar) {
-    var CONSENT_KEY = "ivanaguide_cookie_consent";
-    var saved = null;
-    try { saved = window.localStorage.getItem(CONSENT_KEY); } catch (e) { /* storage blocked */ }
-    if (!saved) {
-      cookieBar.hidden = false;
-    }
-    var respond = function (value) {
-      try { window.localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* storage blocked */ }
-      cookieBar.hidden = true;
-      // If analytics are added later, gate loading them behind:
-      // window.localStorage.getItem(CONSENT_KEY) === "accepted"
-    };
-    var acceptBtn = document.getElementById("cookieAccept");
-    var declineBtn = document.getElementById("cookieDecline");
-    if (acceptBtn) acceptBtn.addEventListener("click", function () { respond("accepted"); });
-    if (declineBtn) declineBtn.addEventListener("click", function () { respond("declined"); });
-  }
+  // The cookie consent bar was removed in 2026-10: the site sets no cookies
+  // and no local storage, so there was nothing to ask consent for. If any
+  // tracking is ever added, the banner has to come back with it, and the
+  // tracking script must not load until consent is given.
 
   // ---- current year (footer fallback if not built) ------------------------
   var y = document.querySelector("[data-year]");
